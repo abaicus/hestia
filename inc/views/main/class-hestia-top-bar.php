@@ -65,7 +65,7 @@ class Hestia_Top_Bar extends Hestia_Abstract_Main {
 		}
 		echo '<div class="' . esc_attr( $this->top_bar_sidebar_class() ) . '">';
 		hestia_display_customizer_shortcut( 'hestia-top-bar-widget' );
-		echo esc_html__( 'This sidebar is active but empty. In order to use this layout, please add widgets in the sidebar', 'hestia' );
+		echo esc_html__( 'This sidebar is active but empty. In order to use this layout, please add widgets in the sidebar', 'hestia-pro' );
 		echo '</div>';
 	}
 

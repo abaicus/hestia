@@ -31,19 +31,19 @@ class Hestia_Page_Settings extends Hestia_Abstract_Metabox {
 	protected function register_controls() {
 
 		$control_settings = array(
-			'label'           => esc_html__( 'Sidebar', 'hestia' ),
+			'label'           => esc_html__( 'Sidebar', 'hestia-pro' ),
 			'choices'         => array(
 				'full-width'    => array(
 					'url'   => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAQMAAABknzrDAAAABlBMVEX////V1dXUdjOkAAAAPUlEQVRIx2NgGAUkAcb////Y/+d/+P8AdcQoc8vhH/X/5P+j2kG+GA3CCgrwi43aMWrHqB2jdowEO4YpAACyKSE0IzIuBgAAAABJRU5ErkJggg==',
-					'label' => esc_html__( 'Full Width', 'hestia' ),
+					'label' => esc_html__( 'Full Width', 'hestia-pro' ),
 				),
 				'sidebar-left'  => array(
 					'url'   => apply_filters( 'hestia_layout_control_image_left', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAgMAAAAjP0ATAAAACVBMVEX///8+yP/V1dXG9YqxAAAAWElEQVR42mNgGAXDE4RCQMDAKONaBQINWqtWrWBatQDIaxg8ygYqQIAOYwC6bwHUmYNH2eBPSMhgBQXKRr0w6oVRL4x6YdQLo14Y9cKoF0a9QCO3jYLhBADvmFlNY69qsQAAAABJRU5ErkJggg==' ),
-					'label' => esc_html__( 'Left Sidebar', 'hestia' ),
+					'label' => esc_html__( 'Left Sidebar', 'hestia-pro' ),
 				),
 				'sidebar-right' => array(
 					'url'   => apply_filters( 'hestia_layout_control_image_right', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAgMAAAAjP0ATAAAACVBMVEX///8+yP/V1dXG9YqxAAAAWUlEQVR42mNgGAUjB4iGgkEIzZStAoEVTECiQWsVkLdiECkboAABOmwBF9BtUGcOImUDEiCkJCQU0ECBslEvjHph1AujXhj1wqgXRr0w6oVRLwyEF0bBUAUAz/FTNXm+R/MAAAAASUVORK5CYII=' ),
-					'label' => esc_html__( 'Right Sidebar', 'hestia' ),
+					'label' => esc_html__( 'Right Sidebar', 'hestia-pro' ),
 				),
 			),
 			'active_callback' => array( $this, 'sidebar_meta_callback' ),
@@ -142,7 +142,7 @@ class Hestia_Page_Settings extends Hestia_Abstract_Metabox {
 		}
 
 		$current_theme = wp_get_theme();
-		$metabox_label = $current_theme->get( 'Name' ) . ' ' . esc_html__( 'General Settings', 'hestia' );
+		$metabox_label = $current_theme->get( 'Name' ) . ' ' . esc_html__( 'General Settings', 'hestia-pro' );
 
 		add_meta_box(
 			'hestia-page-settings',

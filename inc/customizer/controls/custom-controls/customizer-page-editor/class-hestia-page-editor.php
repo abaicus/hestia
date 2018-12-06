@@ -55,7 +55,7 @@ class Hestia_Page_Editor extends WP_Customize_Control {
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 			<?php endif; ?>
 			<input type="hidden" <?php $this->link(); ?> value="<?php echo esc_textarea( $this->value() ); ?>" id="<?php echo esc_attr( $this->id ); ?>" class="editorfield">
-			<button data-editor-id="<?php echo esc_attr( $this->id ); ?>" class="button edit-content-button"><?php _e( '(Edit)', 'hestia' ); ?></button>
+			<button data-editor-id="<?php echo esc_attr( $this->id ); ?>" class="button edit-content-button"><?php _e( '(Edit)', 'hestia-pro' ); ?></button>
 		</label>
 		<?php
 	}

@@ -103,11 +103,11 @@ class Hestia_Plugin_Install_Helper {
 		);
 		switch ( $state ) {
 			case 'install':
-				$button .= '<a data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="install-now hestia-install-plugin button  " href="' . esc_url( $nonce ) . '" data-name="' . esc_attr( $slug ) . '" aria-label="Install ' . esc_attr( $slug ) . '">' . __( 'Install and activate', 'hestia' ) . '</a>';
+				$button .= '<a data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="install-now hestia-install-plugin button  " href="' . esc_url( $nonce ) . '" data-name="' . esc_attr( $slug ) . '" aria-label="Install ' . esc_attr( $slug ) . '">' . __( 'Install and activate', 'hestia-pro' ) . '</a>';
 				break;
 
 			case 'activate':
-				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="activate-now button button-primary" href="' . esc_url( $nonce ) . '" aria-label="Activate ' . esc_attr( $slug ) . '">' . esc_html__( 'Activate', 'hestia' ) . '</a>';
+				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="activate-now button button-primary" href="' . esc_url( $nonce ) . '" aria-label="Activate ' . esc_attr( $slug ) . '">' . esc_html__( 'Activate', 'hestia-pro' ) . '</a>';
 				break;
 
 			case 'deactivate':
@@ -122,12 +122,12 @@ class Hestia_Plugin_Install_Helper {
 					network_admin_url( 'plugins.php' )
 				);
 
-				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="deactivate-now button" href="' . esc_url( $nonce ) . '" data-name="' . esc_attr( $slug ) . '" aria-label="Deactivate ' . esc_attr( $slug ) . '">' . esc_html__( 'Deactivate', 'hestia' ) . '</a>';
+				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="deactivate-now button" href="' . esc_url( $nonce ) . '" data-name="' . esc_attr( $slug ) . '" aria-label="Deactivate ' . esc_attr( $slug ) . '">' . esc_html__( 'Deactivate', 'hestia-pro' ) . '</a>';
 				break;
 
 			case 'enable_cpt':
 				$url     = admin_url( 'admin.php?page=jetpack#/settings' );
-				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" class="button" href="' . esc_url( $url ) . '">' . esc_html__( 'Activate', 'hestia' ) . ' ' . esc_html__( 'Jetpack Portfolio', 'hestia' ) . '</a>';
+				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" class="button" href="' . esc_url( $url ) . '">' . esc_html__( 'Activate', 'hestia-pro' ) . ' ' . esc_html__( 'Jetpack Portfolio', 'hestia-pro' ) . '</a>';
 				break;
 		}// End switch().
 		$button .= '</div>';
@@ -169,7 +169,7 @@ class Hestia_Plugin_Install_Helper {
 			'hestia-plugin-install-helper',
 			'hestia_plugin_helper',
 			array(
-				'activating' => esc_html__( 'Activating ', 'hestia' ),
+				'activating' => esc_html__( 'Activating ', 'hestia-pro' ),
 			)
 		);
 		wp_localize_script(

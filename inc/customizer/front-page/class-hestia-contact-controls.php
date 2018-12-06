@@ -18,7 +18,7 @@ class Hestia_Contact_Controls extends Hestia_Front_Page_Section_Controls_Abstrac
 	protected function set_section_data() {
 		return array(
 			'slug'     => 'contact',
-			'title'    => esc_html__( 'Contact', 'hestia' ),
+			'title'    => esc_html__( 'Contact', 'hestia-pro' ),
 			'priority' => 65,
 		);
 	}
@@ -50,11 +50,11 @@ class Hestia_Contact_Controls extends Hestia_Front_Page_Section_Controls_Abstrac
 					'priority' => 1,
 					'tabs'     => array(
 						'general' => array(
-							'label' => esc_html__( 'General Settings', 'hestia' ),
+							'label' => esc_html__( 'General Settings', 'hestia-pro' ),
 							'icon'  => 'cogs',
 						),
 						'contact' => array(
-							'label' => esc_html__( 'Contact Content', 'hestia' ),
+							'label' => esc_html__( 'Contact Content', 'hestia-pro' ),
 							'icon'  => 'newspaper-o',
 						),
 					),
@@ -91,7 +91,7 @@ class Hestia_Contact_Controls extends Hestia_Front_Page_Section_Controls_Abstrac
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'    => esc_html__( 'Background Image', 'hestia' ),
+					'label'    => esc_html__( 'Background Image', 'hestia-pro' ),
 					'section'  => 'hestia_contact',
 					'priority' => 5,
 				),
@@ -108,12 +108,12 @@ class Hestia_Contact_Controls extends Hestia_Front_Page_Section_Controls_Abstrac
 			new Hestia_Customizer_Control(
 				'hestia_contact_area_title',
 				array(
-					'default'           => esc_html__( 'Contact Us', 'hestia' ),
+					'default'           => esc_html__( 'Contact Us', 'hestia-pro' ),
 					'sanitize_callback' => 'sanitize_text_field',
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'    => esc_html__( 'Form Title', 'hestia' ),
+					'label'    => esc_html__( 'Form Title', 'hestia-pro' ),
 					'section'  => 'hestia_contact',
 					'priority' => 20,
 				)
@@ -156,7 +156,7 @@ class Hestia_Contact_Controls extends Hestia_Front_Page_Section_Controls_Abstrac
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'                      => esc_html__( 'Contact Content', 'hestia' ),
+					'label'                      => esc_html__( 'Contact Content', 'hestia-pro' ),
 					'section'                    => 'hestia_contact',
 					'priority'                   => 30,
 					'include_admin_print_footer' => true,
@@ -182,7 +182,7 @@ class Hestia_Contact_Controls extends Hestia_Front_Page_Section_Controls_Abstrac
 					'sanitize_callback' => 'sanitize_text_field',
 				),
 				array(
-					'label'    => esc_html__( 'Shortcode', 'hestia' ),
+					'label'    => esc_html__( 'Shortcode', 'hestia-pro' ),
 					'section'  => 'hestia_contact',
 					'priority' => 26,
 				)
@@ -218,7 +218,7 @@ class Hestia_Contact_Controls extends Hestia_Front_Page_Section_Controls_Abstrac
 	 * @return void
 	 */
 	public function change_controls() {
-		$this->change_customizer_object( 'setting', 'hestia_contact_title', 'default', esc_html__( 'Get in Touch', 'hestia' ) );
-		$this->change_customizer_object( 'setting', 'hestia_contact_subtitle', 'default', esc_html__( 'Change this subtitle in the Customizer', 'hestia' ) );
+		$this->change_customizer_object( 'setting', 'hestia_contact_title', 'default', esc_html__( 'Get in Touch', 'hestia-pro' ) );
+		$this->change_customizer_object( 'setting', 'hestia_contact_subtitle', 'default', esc_html__( 'Change this subtitle in the Customizer', 'hestia-pro' ) );
 	}
 }

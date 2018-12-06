@@ -19,7 +19,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 	protected function set_section_data() {
 		return array(
 			'slug'     => 'big_title',
-			'title'    => esc_html__( 'Big Title Section', 'hestia' ),
+			'title'    => esc_html__( 'Big Title Section', 'hestia-pro' ),
 			'priority' => 55,
 			'section'  => 'sidebar-widgets-sidebar-big-title',
 			'controls' => array(
@@ -72,7 +72,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 	 */
 	public function change_controls() {
 		$this->change_customizer_object( 'control', 'hestia_big_title_title', 'priority', 20 );
-		$this->change_customizer_object( 'control', 'hestia_big_title_title', 'label', esc_html__( 'Title', 'hestia' ) );
+		$this->change_customizer_object( 'control', 'hestia_big_title_title', 'label', esc_html__( 'Title', 'hestia-pro' ) );
 		$this->change_customizer_object( 'control', 'hestia_big_title_hide', 'priority', -2 );
 		$this->maybe_add_defaults_for_big_title();
 	}
@@ -92,10 +92,10 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 				array(
 					'priority'    => -1,
 					'section'     => 'sidebar-widgets-sidebar-big-title', // Add a default or your own section
-					'label'       => esc_html__( 'Big Title Background', 'hestia' ),
+					'label'       => esc_html__( 'Big Title Background', 'hestia-pro' ),
 					'choices'     => array(
-						'image'    => esc_html__( 'Image', 'hestia' ),
-						'parallax' => esc_html__( 'Parallax', 'hestia' ),
+						'image'    => esc_html__( 'Image', 'hestia-pro' ),
+						'parallax' => esc_html__( 'Parallax', 'hestia-pro' ),
 					),
 					'subcontrols' => array(
 						'image'    => array(
@@ -127,7 +127,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'sanitize_callback' => 'wp_kses',
 				),
 				array(
-					'label'    => esc_html__( 'Big Title Section', 'hestia' ) . ' ' . esc_html__( 'Sidebar', 'hestia' ),
+					'label'    => esc_html__( 'Big Title Section', 'hestia-pro' ) . ' ' . esc_html__( 'Sidebar', 'hestia-pro' ),
 					'section'  => 'sidebar-widgets-sidebar-big-title',
 					'priority' => -1,
 				),
@@ -149,7 +149,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'    => esc_html__( 'Image', 'hestia' ),
+					'label'    => esc_html__( 'Image', 'hestia-pro' ),
 					'section'  => 'sidebar-widgets-sidebar-big-title',
 					'priority' => 10,
 				),
@@ -176,7 +176,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'    => esc_html__( 'Title', 'hestia' ),
+					'label'    => esc_html__( 'Title', 'hestia-pro' ),
 					'section'  => 'sidebar-widgets-sidebar-big-title',
 					'priority' => 15,
 				),
@@ -197,7 +197,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'    => esc_html__( 'Text', 'hestia' ),
+					'label'    => esc_html__( 'Text', 'hestia-pro' ),
 					'section'  => 'sidebar-widgets-sidebar-big-title',
 					'priority' => 25,
 				),
@@ -224,7 +224,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'    => esc_html__( 'Button text', 'hestia' ),
+					'label'    => esc_html__( 'Button text', 'hestia-pro' ),
 					'section'  => 'sidebar-widgets-sidebar-big-title',
 					'priority' => 30,
 				)
@@ -239,7 +239,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'    => esc_html__( 'Button URL', 'hestia' ),
+					'label'    => esc_html__( 'Button URL', 'hestia-pro' ),
 					'section'  => 'sidebar-widgets-sidebar-big-title',
 					'priority' => 35,
 				)
@@ -271,7 +271,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'       => esc_html__( 'Layout', 'hestia' ),
+					'label'       => esc_html__( 'Layout', 'hestia-pro' ),
 					'priority'    => -2,
 					'section'     => 'sidebar-widgets-sidebar-big-title',
 					'choices'     => array(
@@ -320,7 +320,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'default'           => apply_filters( 'hestia_parallax_layer1_default', false ),
 				),
 				array(
-					'label'    => esc_html__( 'First Layer', 'hestia' ),
+					'label'    => esc_html__( 'First Layer', 'hestia-pro' ),
 					'section'  => 'sidebar-widgets-sidebar-big-title',
 					'priority' => 10,
 				),
@@ -335,7 +335,7 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'default'           => apply_filters( 'hestia_parallax_layer2_default', false ),
 				),
 				array(
-					'label'    => esc_html__( 'Second Layer', 'hestia' ),
+					'label'    => esc_html__( 'Second Layer', 'hestia-pro' ),
 					'section'  => 'sidebar-widgets-sidebar-big-title',
 					'priority' => 15,
 				),
@@ -359,11 +359,11 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 					'priority' => -3,
 					'tabs'     => array(
 						'slider' => array(
-							'label' => esc_html__( 'Big Title Section', 'hestia' ),
+							'label' => esc_html__( 'Big Title Section', 'hestia-pro' ),
 							'icon'  => 'picture-o',
 						),
 						'extra'  => array(
-							'label' => esc_html__( 'Extra', 'hestia' ),
+							'label' => esc_html__( 'Extra', 'hestia-pro' ),
 							'icon'  => 'user-plus',
 						),
 					),
@@ -420,9 +420,9 @@ class Hestia_Big_Title_Controls extends Hestia_Front_Page_Section_Controls_Abstr
 		}
 
 		$this->change_customizer_object( 'setting', 'hestia_big_title_background', 'default', esc_url( apply_filters( 'hestia_big_title_background_default', get_template_directory_uri() . '/assets/img/slider2.jpg' ) ) );
-		$this->change_customizer_object( 'setting', 'hestia_big_title_title', 'default', esc_html__( 'Change in the Customizer', 'hestia' ) );
-		$this->change_customizer_object( 'setting', 'hestia_big_title_text', 'default', esc_html__( 'Change in the Customizer', 'hestia' ) );
-		$this->change_customizer_object( 'setting', 'hestia_big_title_button_text', 'default', esc_html__( 'Change in the Customizer', 'hestia' ) );
+		$this->change_customizer_object( 'setting', 'hestia_big_title_title', 'default', esc_html__( 'Change in the Customizer', 'hestia-pro' ) );
+		$this->change_customizer_object( 'setting', 'hestia_big_title_text', 'default', esc_html__( 'Change in the Customizer', 'hestia-pro' ) );
+		$this->change_customizer_object( 'setting', 'hestia_big_title_button_text', 'default', esc_html__( 'Change in the Customizer', 'hestia-pro' ) );
 		$this->change_customizer_object( 'setting', 'hestia_big_title_button_link', 'default', esc_url( '#' ) );
 	}
 

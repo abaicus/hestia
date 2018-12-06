@@ -138,7 +138,7 @@ class Hestia_Featured_Posts extends Hestia_Abstract_Main {
 			}
 
 			echo '<a href="' . esc_url( $post_url ) . '" class="btn colored-button">';
-			echo apply_filters( 'hestia_features_blog_posts_button_text', esc_html__( 'Read more', 'hestia' ) );
+			echo apply_filters( 'hestia_features_blog_posts_button_text', esc_html__( 'Read more', 'hestia-pro' ) );
 			echo '</a>';
 
 			echo '</div>';

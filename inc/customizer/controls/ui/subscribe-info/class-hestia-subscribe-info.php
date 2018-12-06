@@ -110,7 +110,7 @@ class Hestia_Subscribe_Info extends WP_Customize_Control {
 		$sib_account    = false;
 
 		if ( $this->state === 'install' || $this->state === 'activate' ) {
-			$text           = esc_html__( 'Here is where you must add the "SendinBlue Newsletter" widget.', 'hestia' );
+			$text           = esc_html__( 'Here is where you must add the "SendinBlue Newsletter" widget.', 'hestia-pro' );
 			$display_button = true;
 			$sib_account    = false;
 		}
@@ -118,11 +118,11 @@ class Hestia_Subscribe_Info extends WP_Customize_Control {
 		if ( $this->state === 'create_account' ) {
 			$text = sprintf(
 				/* translators: %s Path in plugin wrapped*/
-				esc_html__( 'After installing the plugin, you need to navigate to %s and configure the plugin.', 'hestia' ),
+				esc_html__( 'After installing the plugin, you need to navigate to %s and configure the plugin.', 'hestia-pro' ),
 				sprintf(
 					/* translators: %s Path in plugin*/
 						'<a target="_blank" href="' . admin_url( 'admin.php?page=sib_page_home' ) . '"><b>%s</b></a>',
-					esc_html__( 'SendinBlue > Home', 'hestia' )
+					esc_html__( 'SendinBlue > Home', 'hestia-pro' )
 				)
 			);
 			$display_button = false;
@@ -131,10 +131,10 @@ class Hestia_Subscribe_Info extends WP_Customize_Control {
 
 		if ( $this->state === 'configure' ) {
 			$text           = sprintf(
-				esc_html__( 'Here is where you must add the "SendinBlue Newsletter" widget.', 'hestia' ) . ' %s',
+				esc_html__( 'Here is where you must add the "SendinBlue Newsletter" widget.', 'hestia-pro' ) . ' %s',
 				sprintf(
 					'<a target="_blank" href="https://docs.themeisle.com/article/879-how-to-integrate-sendinblue-wordpress-plugin-to-your-website">%s</a>',
-					esc_html__( 'Read full documentation', 'hestia' )
+					esc_html__( 'Read full documentation', 'hestia-pro' )
 				)
 			);
 			$display_button = false;
@@ -156,7 +156,7 @@ class Hestia_Subscribe_Info extends WP_Customize_Control {
 
 		if ( $sib_account === true ) {
 			echo '<br/>';
-			echo '<a target="_blank" href="http://bit.ly/sibcwp" class="button" style="margin-top: 8px">' . esc_html__( 'Create SendinBlue Account', 'hestia' ) . '</a>';
+			echo '<a target="_blank" href="http://bit.ly/sibcwp" class="button" style="margin-top: 8px">' . esc_html__( 'Create SendinBlue Account', 'hestia-pro' ) . '</a>';
 		}
 	}
 

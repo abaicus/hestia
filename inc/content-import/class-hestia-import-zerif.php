@@ -118,11 +118,11 @@ class Hestia_Import_Zerif extends Hestia_Import_Utilities {
 		}
 
 		// Set all mods in the $simple_theme_mods array.
-		$this->set_simple_mods();
+		$this->import_zerif_header();
 
 		$this->import_zerif_parallax();
 
-		$this->import_zerif_header();
+		$this->set_simple_mods();
 
 		$this->widgets_to_theme_mods();
 
@@ -186,6 +186,25 @@ class Hestia_Import_Zerif extends Hestia_Import_Utilities {
 	 * @since 1.1.51
 	 */
 	private function import_zerif_header() {
+		if ( $this->previous_theme === 'zerif-lite' ) {
+			$this->match_controls['hestia_big_title_background']  = 'background_image';
+			$this->match_controls['hestia_big_title_hide']        = 'zerif_bigtitle_show';
+			$this->match_controls['hestia_big_title_title']       = 'zerif_bigtitle_title_2';
+			$this->match_controls['hestia_big_title_button_text'] = 'zerif_bigtitle_redbutton_label_2';
+			$this->match_controls['hestia_big_title_button_link'] = 'zerif_bigtitle_redbutton_url';
+            if ( ! empty( $this->previous_theme_content['zerif_bigtitle_redbutton_label_2'] ) ) {
+                $prev_red_button_text = get_theme_mod($this->previous_theme_content['zerif_bigtitle_redbutton_label_2']);
+            }
+            if ( ! empty( $this->previous_theme_content['zerif_bigtitle_redbutton_url'] ) ) {
+                $prev_red_button_link = get_theme_mod($this->previous_theme_content['zerif_bigtitle_redbutton_url']);
+            }
+			if ( empty( $prev_red_button_text ) || empty( $prev_red_button_link ) ) {
+				$this->match_controls['hestia_big_title_button_text'] = 'zerif_bigtitle_greenbutton_label';
+				$this->match_controls['hestia_big_title_button_link'] = 'zerif_bigtitle_greenbutton_url';
+			}
+
+			return;
+		}
 		// This is the main structure of a slide. In zerif all slides have same content but different background.
 		$main_slide = array();
 		if ( ! empty( $this->previous_theme_content['zerif_bigtitle_title'] ) ) {
@@ -871,7 +890,7 @@ class Hestia_Import_Zerif extends Hestia_Import_Utilities {
 		$theme_navs = get_theme_mod( 'nav_menu_locations' );
 		if ( empty( $theme_navs['footer'] ) ) {
 
-			$menu_name   = __( 'Footer socials menu', 'hestia' );
+			$menu_name   = __( 'Footer socials menu', 'hestia-pro' );
 			$menu_exists = wp_get_nav_menu_object( $menu_name );
 			if ( ! $menu_exists ) {
 				$menu_id = wp_create_nav_menu( $menu_name );
@@ -882,7 +901,7 @@ class Hestia_Import_Zerif extends Hestia_Import_Utilities {
 							$menu_id,
 							0,
 							array(
-								'menu-item-title'  => __( 'Custom Page', 'hestia' ),
+								'menu-item-title'  => __( 'Custom Page', 'hestia-pro' ),
 								'menu-item-url'    => $this->previous_theme_content[ $social ],
 								'menu-item-status' => 'publish',
 							)

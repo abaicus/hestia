@@ -176,20 +176,20 @@ class Hestia_Big_Title_Section extends Hestia_First_Front_Page_Section {
 		}
 
 		/* translators: 1 - link to customizer setting. 2 - 'customizer' */
-		$title_default          = current_user_can( 'edit_theme_options' ) ? sprintf( esc_html__( 'Change in the %s', 'hestia' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_big_title_title' ) ), __( 'Customizer', 'hestia' ) ) ) : false;
+		$title_default          = current_user_can( 'edit_theme_options' ) ? sprintf( esc_html__( 'Change in the %s', 'hestia-pro' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_big_title_title' ) ), __( 'Customizer', 'hestia-pro' ) ) ) : false;
 		$hestia_big_title_title = get_theme_mod( 'hestia_big_title_title', $title_default );
 		if ( ! empty( $hestia_big_title_title ) ) {
 			$section_content['title'] = $hestia_big_title_title;
 		}
 
 		/* translators: 1 - link to customizer setting. 2 - 'customizer' */
-		$text_default          = current_user_can( 'edit_theme_options' ) ? sprintf( esc_html__( 'Change in the %s', 'hestia' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_big_title_text' ) ), __( 'Customizer', 'hestia' ) ) ) : false;
+		$text_default          = current_user_can( 'edit_theme_options' ) ? sprintf( esc_html__( 'Change in the %s', 'hestia-pro' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_big_title_text' ) ), __( 'Customizer', 'hestia-pro' ) ) ) : false;
 		$hestia_big_title_text = get_theme_mod( 'hestia_big_title_text', $text_default );
 		if ( ! empty( $hestia_big_title_text ) ) {
 			$section_content['text'] = $hestia_big_title_text;
 		}
 
-		$button_text_default          = current_user_can( 'edit_theme_options' ) ? esc_html__( 'Change in the Customizer', 'hestia' ) : false;
+		$button_text_default          = current_user_can( 'edit_theme_options' ) ? esc_html__( 'Change in the Customizer', 'hestia-pro' ) : false;
 		$hestia_big_title_button_text = get_theme_mod( 'hestia_big_title_button_text', $button_text_default );
 		if ( ! empty( $hestia_big_title_button_text ) ) {
 			$section_content['button_text'] = $hestia_big_title_button_text;

@@ -314,7 +314,7 @@ class Hestia_Header_Layout_Manager extends Hestia_Abstract_Main {
 		if ( is_search() ) {
 			$header_content_output = '<h1 class="' . esc_attr( $title_class ) . '">';
 			/* translators: search result */
-			$header_content_output .= sprintf( esc_html__( 'Search Results for: %s', 'hestia' ), get_search_query() );
+			$header_content_output .= sprintf( esc_html__( 'Search Results for: %s', 'hestia-pro' ), get_search_query() );
 			$header_content_output .= '</h1>';
 
 			return $header_content_output;
@@ -380,7 +380,7 @@ class Hestia_Header_Layout_Manager extends Hestia_Abstract_Main {
 			'hestia_single_post_meta',
 			sprintf(
 				/* translators: %1$s is Author name wrapped, %2$s is Date*/
-				esc_html__( 'Published by %1$s on %2$s', 'hestia' ),
+				esc_html__( 'Published by %1$s on %2$s', 'hestia-pro' ),
 				/* translators: %1$s is Author name, %2$s is Author link*/
 				sprintf(
 					'<a href="%2$s" class="vcard author"><strong class="fn">%1$s</strong></a>',

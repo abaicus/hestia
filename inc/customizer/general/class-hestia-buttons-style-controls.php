@@ -43,7 +43,7 @@ class Hestia_Buttons_Style_Controls extends Hestia_Register_Customizer_Controls 
 			new Hestia_Customizer_Section(
 				'hestia_buttons_style',
 				array(
-					'title'    => esc_html__( 'Button', 'hestia' ),
+					'title'    => esc_html__( 'Button', 'hestia-pro' ),
 					'panel'    => 'hestia_appearance_settings',
 					'priority' => 150,
 				)
@@ -80,7 +80,7 @@ class Hestia_Buttons_Style_Controls extends Hestia_Register_Customizer_Controls 
 					),
 				),
 				array(
-					'label'       => esc_html__( 'Padding (px)', 'hestia' ),
+					'label'       => esc_html__( 'Padding (px)', 'hestia-pro' ),
 					'section'     => 'hestia_buttons_style',
 					'priority'    => 10,
 					'input_attrs' => array(
@@ -105,7 +105,7 @@ class Hestia_Buttons_Style_Controls extends Hestia_Register_Customizer_Controls 
 					'transport'         => 'postMessage',
 				),
 				array(
-					'label'      => esc_html__( 'Border radius', 'hestia' ),
+					'label'      => esc_html__( 'Border radius', 'hestia-pro' ),
 					'section'    => 'hestia_buttons_style',
 					'type'       => 'range-value',
 					'input_attr' => array(

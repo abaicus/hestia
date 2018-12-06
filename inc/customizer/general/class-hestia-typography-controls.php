@@ -47,7 +47,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 			new Hestia_Customizer_Section(
 				'hestia_typography',
 				array(
-					'title'    => esc_html__( 'Typography', 'hestia' ),
+					'title'    => esc_html__( 'Typography', 'hestia-pro' ),
 					'panel'    => 'hestia_appearance_settings',
 					'priority' => 25,
 				)
@@ -70,11 +70,11 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'priority' => 1,
 					'tabs'     => array(
 						'font_family' => array(
-							'label' => esc_html__( 'font family', 'hestia' ),
+							'label' => esc_html__( 'font family', 'hestia-pro' ),
 							'icon'  => 'font',
 						),
 						'font_sizes'  => array(
-							'label' => esc_html__( 'font size', 'hestia' ),
+							'label' => esc_html__( 'font size', 'hestia-pro' ),
 							'icon'  => 'text-height',
 						),
 					),
@@ -126,7 +126,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'sanitize_text_field',
 				),
 				array(
-					'label'    => esc_html__( 'Headings', 'hestia' ) . ' ' . esc_html__( 'font family', 'hestia' ),
+					'label'    => esc_html__( 'Headings', 'hestia-pro' ) . ' ' . esc_html__( 'font family', 'hestia-pro' ),
 					'section'  => 'hestia_typography',
 					'priority' => 5,
 					'type'     => 'select',
@@ -143,7 +143,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'sanitize_text_field',
 				),
 				array(
-					'label'    => esc_html__( 'Body', 'hestia' ) . ' ' . esc_html__( 'font family', 'hestia' ),
+					'label'    => esc_html__( 'Body', 'hestia-pro' ) . ' ' . esc_html__( 'font family', 'hestia-pro' ),
 					'section'  => 'hestia_typography',
 					'priority' => 10,
 					'type'     => 'select',
@@ -170,7 +170,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 				),
 				array(
 					'section'  => 'hestia_typography',
-					'label'    => esc_html__( 'Font Subsets', 'hestia' ),
+					'label'    => esc_html__( 'Font Subsets', 'hestia-pro' ),
 					'choices'  => array(
 						'latin'        => 'latin',
 						'latin-ext'    => 'latin-ext',
@@ -198,7 +198,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'wp_kses',
 				),
 				array(
-					'label'    => esc_html__( 'Posts & Pages', 'hestia' ),
+					'label'    => esc_html__( 'Posts & Pages', 'hestia-pro' ),
 					'section'  => 'hestia_typography',
 					'priority' => 100,
 				),
@@ -213,7 +213,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'wp_kses',
 				),
 				array(
-					'label'    => esc_html__( 'Frontpage Sections', 'hestia' ),
+					'label'    => esc_html__( 'Frontpage Sections', 'hestia-pro' ),
 					'section'  => 'hestia_typography',
 					'priority' => 200,
 				),
@@ -242,7 +242,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'       => esc_html__( 'Title', 'hestia' ),
+					'label'       => esc_html__( 'Title', 'hestia-pro' ),
 					'section'     => 'hestia_typography',
 					'type'        => 'range-value',
 					'input_attr'  => array(
@@ -275,7 +275,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'      => esc_html__( 'Headings', 'hestia' ),
+					'label'      => esc_html__( 'Headings', 'hestia-pro' ),
 					'section'    => 'hestia_typography',
 					'type'       => 'range-value',
 					'input_attr' => array(
@@ -307,7 +307,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'      => esc_html__( 'Content', 'hestia' ),
+					'label'      => esc_html__( 'Content', 'hestia-pro' ),
 					'section'    => 'hestia_typography',
 					'type'       => 'range-value',
 					'input_attr' => array(
@@ -344,7 +344,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'      => apply_filters( 'hestia_big_title_fs_label', esc_html__( 'Big Title Section', 'hestia' ) ),
+					'label'      => apply_filters( 'hestia_big_title_fs_label', esc_html__( 'Big Title Section', 'hestia-pro' ) ),
 					'section'    => 'hestia_typography',
 					'type'       => 'range-value',
 					'input_attr' => array(
@@ -374,7 +374,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => 'postMessage',
 				),
 				array(
-					'label'      => esc_html__( 'Section Title', 'hestia' ),
+					'label'      => esc_html__( 'Section Title', 'hestia-pro' ),
 					'section'    => 'hestia_typography',
 					'type'       => 'range-value',
 					'input_attr' => array(
@@ -405,7 +405,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'      => esc_html__( 'Section Subtitle', 'hestia' ),
+					'label'      => esc_html__( 'Section Subtitle', 'hestia-pro' ),
 					'section'    => 'hestia_typography',
 					'type'       => 'range-value',
 					'input_attr' => array(
@@ -436,7 +436,7 @@ class Hestia_Typography_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => 'postMessage',
 				),
 				array(
-					'label'      => esc_html__( 'Content', 'hestia' ),
+					'label'      => esc_html__( 'Content', 'hestia-pro' ),
 					'section'    => 'hestia_typography',
 					'type'       => 'range-value',
 					'input_attr' => array(

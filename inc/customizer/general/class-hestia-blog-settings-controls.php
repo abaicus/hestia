@@ -28,7 +28,7 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 			new Hestia_Customizer_Section(
 				'hestia_blog_layout',
 				array(
-					'title'    => apply_filters( 'hestia_blog_layout_control_label', esc_html__( 'Blog Settings', 'hestia' ) ),
+					'title'    => apply_filters( 'hestia_blog_layout_control_label', esc_html__( 'Blog Settings', 'hestia-pro' ) ),
 					'priority' => 45,
 				)
 			)
@@ -47,7 +47,7 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 					'sanitize_callback' => 'wp_kses',
 				),
 				array(
-					'label'    => esc_html__( 'Featured Posts', 'hestia' ),
+					'label'    => esc_html__( 'Featured Posts', 'hestia-pro' ),
 					'section'  => 'hestia_blog_layout',
 					'priority' => 10,
 				),
@@ -56,7 +56,7 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 		);
 
 		$options    = array(
-			0 => ' -- ' . esc_html__( 'Disable section', 'hestia' ) . ' -- ',
+			0 => ' -- ' . esc_html__( 'Disable section', 'hestia-pro' ) . ' -- ',
 		);
 		$categories = get_categories();
 		if ( ! empty( $categories ) ) {
@@ -77,7 +77,7 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 				array(
 					'type'     => 'select',
 					'section'  => 'hestia_blog_layout',
-					'label'    => esc_html__( 'Categories:', 'hestia' ),
+					'label'    => esc_html__( 'Categories:', 'hestia-pro' ),
 					'choices'  => $options,
 					'priority' => 15,
 				)
@@ -97,7 +97,7 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 					'sanitize_callback' => 'hestia_sanitize_blog_layout_control',
 				),
 				array(
-					'label'       => esc_html__( 'Blog', 'hestia' ) . ' ' . esc_html__( 'Layout', 'hestia' ),
+					'label'       => esc_html__( 'Blog', 'hestia-pro' ) . ' ' . esc_html__( 'Layout', 'hestia-pro' ),
 					'section'     => 'hestia_blog_layout',
 					'priority'    => 25,
 					'choices'     => array(
@@ -134,7 +134,7 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 					'sanitize_callback' => 'wp_kses',
 				),
 				array(
-					'label'    => esc_html__( 'Blog Settings', 'hestia' ),
+					'label'    => esc_html__( 'Blog Settings', 'hestia-pro' ),
 					'section'  => 'hestia_blog_layout',
 					'priority' => 20,
 				),
@@ -153,11 +153,11 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 					'type'     => 'select',
 					'priority' => 40,
 					'section'  => 'hestia_blog_layout',
-					'label'    => esc_html__( 'Display', 'hestia' ) . ' ' . esc_html__( 'Blog', 'hestia' ) . ' ' . esc_html__( 'Categories:', 'hestia' ),
+					'label'    => esc_html__( 'Display', 'hestia-pro' ) . ' ' . esc_html__( 'Blog', 'hestia-pro' ) . ' ' . esc_html__( 'Categories:', 'hestia-pro' ),
 					'choices'  => array(
-						'none' => esc_html__( 'None', 'hestia' ),
-						'one'  => esc_html__( 'First', 'hestia' ),
-						'all'  => esc_html__( 'All', 'hestia' ),
+						'none' => esc_html__( 'None', 'hestia-pro' ),
+						'one'  => esc_html__( 'First', 'hestia-pro' ),
+						'all'  => esc_html__( 'All', 'hestia-pro' ),
 					),
 				)
 			)
@@ -173,10 +173,10 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 				array(
 					'priority'    => 45,
 					'section'     => 'hestia_blog_layout',
-					'label'       => esc_html__( 'Blog Post Content', 'hestia' ),
+					'label'       => esc_html__( 'Blog Post Content', 'hestia-pro' ),
 					'choices'     => array(
-						'excerpt' => esc_html__( 'Excerpt', 'hestia' ),
-						'content' => esc_html__( 'Content', 'hestia' ),
+						'excerpt' => esc_html__( 'Excerpt', 'hestia-pro' ),
+						'content' => esc_html__( 'Content', 'hestia-pro' ),
 					),
 					'subcontrols' => array(
 						'excerpt' => array(
@@ -198,7 +198,7 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 					'sanitize_callback' => 'absint',
 				),
 				array(
-					'label'    => esc_html__( 'Excerpt length', 'hestia' ),
+					'label'    => esc_html__( 'Excerpt length', 'hestia-pro' ),
 					'section'  => 'hestia_blog_layout',
 					'priority' => 50,
 					'type'     => 'number',
@@ -214,13 +214,13 @@ class Hestia_Blog_Settings_Controls extends Hestia_Register_Customizer_Controls 
 					'sanitize_callback' => 'sanitize_text_field',
 				),
 				array(
-					'label'    => esc_html__( 'Post Pagination', 'hestia' ),
+					'label'    => esc_html__( 'Post Pagination', 'hestia-pro' ),
 					'section'  => 'hestia_blog_layout',
 					'priority' => 55,
 					'type'     => 'select',
 					'choices'  => array(
-						'number'   => esc_html__( 'Number', 'hestia' ),
-						'infinite' => esc_html__( 'Infinite Scroll', 'hestia' ),
+						'number'   => esc_html__( 'Number', 'hestia-pro' ),
+						'infinite' => esc_html__( 'Infinite Scroll', 'hestia-pro' ),
 					),
 				)
 			)

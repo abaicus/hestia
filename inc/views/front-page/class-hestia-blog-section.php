@@ -56,11 +56,11 @@ class Hestia_Blog_Section extends Hestia_Abstract_Main {
 		 */
 		if ( current_user_can( 'edit_theme_options' ) ) {
 			/* translators: 1 - link to customizer setting. 2 - 'customizer' */
-			$hestia_blog_subtitle = get_theme_mod( 'hestia_blog_subtitle', sprintf( __( 'Change this subtitle in the %s.', 'hestia' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_blog_subtitle' ) ), __( 'Customizer', 'hestia' ) ) ) );
+			$hestia_blog_subtitle = get_theme_mod( 'hestia_blog_subtitle', sprintf( __( 'Change this subtitle in the %s.', 'hestia-pro' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_blog_subtitle' ) ), __( 'Customizer', 'hestia-pro' ) ) ) );
 		} else {
 			$hestia_blog_subtitle = get_theme_mod( 'hestia_blog_subtitle' );
 		}
-		$hestia_blog_title = get_theme_mod( 'hestia_blog_title', __( 'Blog', 'hestia' ) );
+		$hestia_blog_title = get_theme_mod( 'hestia_blog_title', __( 'Blog', 'hestia-pro' ) );
 		if ( $is_shortcode ) {
 			$hestia_blog_title    = '';
 			$hestia_blog_subtitle = '';

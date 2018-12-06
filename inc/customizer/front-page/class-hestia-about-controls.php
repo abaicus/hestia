@@ -29,7 +29,7 @@ class Hestia_About_Controls extends Hestia_Register_Customizer_Controls {
 			new Hestia_Customizer_Section(
 				'hestia_about',
 				array(
-					'title'          => esc_html__( 'About', 'hestia' ),
+					'title'          => esc_html__( 'About', 'hestia-pro' ),
 					'panel'          => 'hestia_frontpage_sections',
 					'priority'       => apply_filters( 'hestia_section_priority', 15, 'hestia_about' ),
 					'hiding_control' => 'hestia_about_hide',
@@ -53,7 +53,7 @@ class Hestia_About_Controls extends Hestia_Register_Customizer_Controls {
 				),
 				array(
 					'type'     => 'checkbox',
-					'label'    => esc_html__( 'Disable section', 'hestia' ),
+					'label'    => esc_html__( 'Disable section', 'hestia-pro' ),
 					'section'  => 'hestia_about',
 					'priority' => 1,
 				)
@@ -108,7 +108,7 @@ class Hestia_About_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'sanitize_text_field',
 				),
 				array(
-					'label'           => esc_html__( 'About Content', 'hestia' ),
+					'label'           => esc_html__( 'About Content', 'hestia-pro' ),
 					'section'         => 'hestia_about',
 					'priority'        => 14,
 					'active_callback' => array( $this, 'page_edited_with_page_builder' ),
@@ -131,7 +131,7 @@ class Hestia_About_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'           => esc_html__( 'About background', 'hestia' ),
+					'label'           => esc_html__( 'About background', 'hestia-pro' ),
 					'section'         => 'hestia_about',
 					'priority'        => 15,
 					'active_callback' => array( $this, 'is_static_page' ),
@@ -155,10 +155,10 @@ class Hestia_About_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'sanitize_text_field',
 				),
 				array(
-					'label'           => esc_html__( 'About Content', 'hestia' ),
+					'label'           => esc_html__( 'About Content', 'hestia-pro' ),
 					'section'         => 'hestia_about',
 					'priority'        => 10,
-					'button_text'     => esc_html__( '(Edit)', 'hestia' ),
+					'button_text'     => esc_html__( '(Edit)', 'hestia-pro' ),
 					'button_class'    => 'open-editor',
 					'icon_class'      => 'fa-pencil',
 					'link'            => get_edit_post_link( $frontpage_id ),

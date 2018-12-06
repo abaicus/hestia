@@ -22,7 +22,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 				'hestia_header_options',
 				array(
 					'priority' => 35,
-					'title'    => esc_html__( 'Header Options', 'hestia' ),
+					'title'    => esc_html__( 'Header Options', 'hestia-pro' ),
 				)
 			)
 		);
@@ -36,7 +36,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 				),
 				array(
 					'type'     => 'checkbox',
-					'label'    => esc_html__( 'Enable Header Image Sitewide', 'hestia' ),
+					'label'    => esc_html__( 'Enable Header Image Sitewide', 'hestia-pro' ),
 					'section'  => 'header_image',
 					'priority' => 25,
 				)
@@ -52,7 +52,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 				),
 				array(
 					'type'     => 'checkbox',
-					'label'    => esc_html__( 'Disable section', 'hestia' ),
+					'label'    => esc_html__( 'Disable section', 'hestia-pro' ),
 					'section'  => 'hestia_top_bar',
 					'priority' => 1,
 				)
@@ -68,7 +68,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 				array(
 					'priority'     => 25,
 					'section'      => 'hestia_top_bar',
-					'button_text'  => esc_html__( 'Very Top Bar', 'hestia' ) . ' ' . esc_html__( 'Menu', 'hestia' ),
+					'button_text'  => esc_html__( 'Very Top Bar', 'hestia-pro' ) . ' ' . esc_html__( 'Menu', 'hestia-pro' ),
 					'button_class' => 'hestia-link-to-top-menu',
 					'icon_class'   => 'fa-bars',
 				),
@@ -106,7 +106,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 				),
 				array(
 					'type'     => 'checkbox',
-					'label'    => esc_html__( 'Enable Search in Menu', 'hestia' ),
+					'label'    => esc_html__( 'Enable Search in Menu', 'hestia-pro' ),
 					'section'  => 'hestia_navigation',
 					'priority' => 5,
 				)
@@ -121,7 +121,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'hestia_sanitize_alignment_options',
 				),
 				array(
-					'label'    => esc_html__( 'Layout', 'hestia' ),
+					'label'    => esc_html__( 'Layout', 'hestia-pro' ),
 					'priority' => 25,
 					'section'  => 'hestia_navigation',
 					'choices'  => apply_filters(
@@ -169,7 +169,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 					'default'           => 'default',
 				),
 				array(
-					'label'    => esc_html__( 'Layout', 'hestia' ),
+					'label'    => esc_html__( 'Layout', 'hestia-pro' ),
 					'section'  => 'header_image',
 					'priority' => 10,
 					'choices'  => $sidebar_choices,
@@ -251,7 +251,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 		$header_image_section = $this->get_customizer_object( 'section', 'header_image' );
 
 		if ( ! empty( $header_image_section ) ) {
-			$header_image_section->title    = esc_html__( 'Header Settings', 'hestia' );
+			$header_image_section->title    = esc_html__( 'Header Settings', 'hestia-pro' );
 			$header_image_section->panel    = 'hestia_header_options';
 			$header_image_section->priority = 20;
 		}
@@ -296,7 +296,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 			new Hestia_Customizer_Section(
 				'hestia_navigation',
 				array(
-					'title'    => esc_html__( 'Navigation', 'hestia' ),
+					'title'    => esc_html__( 'Navigation', 'hestia-pro' ),
 					'panel'    => 'hestia_header_options',
 					'priority' => 15,
 				)
@@ -307,7 +307,7 @@ class Hestia_Header_Controls extends Hestia_Register_Customizer_Controls {
 			new Hestia_Customizer_Section(
 				'hestia_top_bar',
 				array(
-					'title'    => esc_html__( 'Very Top Bar', 'hestia' ),
+					'title'    => esc_html__( 'Very Top Bar', 'hestia-pro' ),
 					'panel'    => 'hestia_header_options',
 					'priority' => 10,
 				)

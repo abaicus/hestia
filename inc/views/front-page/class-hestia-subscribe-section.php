@@ -62,11 +62,11 @@ class Hestia_Subscribe_Section extends Hestia_Abstract_Main {
 		 */
 		if ( current_user_can( 'edit_theme_options' ) ) {
 			/* translators: 1 - link to customizer setting. 2 - 'customizer' */
-			$hestia_subscribe_subtitle = get_theme_mod( 'hestia_subscribe_subtitle', sprintf( __( 'Change this subtitle in %s.', 'hestia' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_subscribe_subtitle' ) ), __( 'customizer', 'hestia' ) ) ) );
+			$hestia_subscribe_subtitle = get_theme_mod( 'hestia_subscribe_subtitle', sprintf( __( 'Change this subtitle in %s.', 'hestia-pro' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_subscribe_subtitle' ) ), __( 'customizer', 'hestia-pro' ) ) ) );
 		} else {
 			$hestia_subscribe_subtitle = get_theme_mod( 'hestia_subscribe_subtitle' );
 		}
-		$hestia_subscribe_title      = get_theme_mod( 'hestia_subscribe_title', __( 'Subscribe to our Newsletter', 'hestia' ) );
+		$hestia_subscribe_title      = get_theme_mod( 'hestia_subscribe_title', __( 'Subscribe to our Newsletter', 'hestia-pro' ) );
 		$hestia_subscribe_background = get_theme_mod( 'hestia_subscribe_background', get_template_directory_uri() . '/assets/img/about.jpg' );
 		if ( ! empty( $hestia_subscribe_background ) ) {
 			$section_style .= 'background-image: url(' . esc_url( $hestia_subscribe_background ) . ');';

@@ -18,7 +18,7 @@ class Hestia_Blog_Section_Controls extends Hestia_Front_Page_Section_Controls_Ab
 	protected function set_section_data() {
 		return array(
 			'slug'     => 'blog',
-			'title'    => esc_html__( 'Blog', 'hestia' ),
+			'title'    => esc_html__( 'Blog', 'hestia-pro' ),
 			'priority' => 60,
 		);
 	}
@@ -43,7 +43,7 @@ class Hestia_Blog_Section_Controls extends Hestia_Front_Page_Section_Controls_Ab
 					'transport'         => $this->selective_refresh,
 				),
 				array(
-					'label'       => esc_html__( 'Number of Items', 'hestia' ),
+					'label'       => esc_html__( 'Number of Items', 'hestia-pro' ),
 					'section'     => 'hestia_blog',
 					'priority'    => 15,
 					'type'        => 'number',
@@ -76,8 +76,8 @@ class Hestia_Blog_Section_Controls extends Hestia_Front_Page_Section_Controls_Ab
 	 * @return void
 	 */
 	public function change_controls() {
-		$this->change_customizer_object( 'setting', 'hestia_blog_title', 'default', esc_html__( 'Blog', 'hestia' ) );
-		$this->change_customizer_object( 'setting', 'hestia_blog_subtitle', 'default', esc_html__( 'Change this subtitle in the Customizer', 'hestia' ) );
+		$this->change_customizer_object( 'setting', 'hestia_blog_title', 'default', esc_html__( 'Blog', 'hestia-pro' ) );
+		$this->change_customizer_object( 'setting', 'hestia_blog_subtitle', 'default', esc_html__( 'Change this subtitle in the Customizer', 'hestia-pro' ) );
 	}
 
 }

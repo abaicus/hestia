@@ -950,3 +950,6 @@ for design.
 | alcohol-aperol-bar-128242 | CC0 | https://pixabay.com/en/cocktail-aperol-spritz-1542495/ |
 | IMG\_6455.jpg (used in Lawyers Demo) | CC0 | https://mystock.themeisle.com/photo/liberty-in-shadow/ |
 | hestia\_gym-slide1.jpg | CC0 | https://pixabay.com/en/sport-fitness-training-sporty-2262083/ |
+| metal snowflake | CC0 | https://mystock.themeisle.com/photo/metal-snowflake/ |
+| window | CC0 | https://mystock.themeisle.com/photo/window/ |
+| red umbrellas | CC0 | https://mystock.themeisle.com/photo/red-umbrellas/ |

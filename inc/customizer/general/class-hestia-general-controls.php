@@ -41,7 +41,7 @@ class Hestia_General_Controls extends Hestia_Register_Customizer_Controls {
 			new Hestia_Customizer_Section(
 				'hestia_general',
 				array(
-					'title'    => esc_html__( 'General Settings', 'hestia' ),
+					'title'    => esc_html__( 'General Settings', 'hestia-pro' ),
 					'panel'    => 'hestia_appearance_settings',
 					'priority' => 20,
 				)
@@ -62,7 +62,7 @@ class Hestia_General_Controls extends Hestia_Register_Customizer_Controls {
 					'default'           => 'full-width',
 				),
 				array(
-					'label'    => esc_html__( 'Page Sidebar Layout', 'hestia' ),
+					'label'    => esc_html__( 'Page Sidebar Layout', 'hestia-pro' ),
 					'section'  => 'hestia_general',
 					'priority' => 15,
 					'choices'  => $this->get_layout_choices(),
@@ -85,7 +85,7 @@ class Hestia_General_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'sanitize_key',
 				),
 				array(
-					'label'    => esc_html__( 'Blog Sidebar Layout', 'hestia' ),
+					'label'    => esc_html__( 'Blog Sidebar Layout', 'hestia-pro' ),
 					'section'  => 'hestia_general',
 					'priority' => 20,
 					'choices'  => $this->get_layout_choices(),
@@ -107,7 +107,7 @@ class Hestia_General_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'hestia_sanitize_checkbox',
 				),
 				array(
-					'label'    => esc_html__( 'Enable Sharing Icons', 'hestia' ),
+					'label'    => esc_html__( 'Enable Sharing Icons', 'hestia-pro' ),
 					'section'  => 'hestia_general',
 					'priority' => 30,
 					'type'     => 'checkbox',
@@ -128,7 +128,7 @@ class Hestia_General_Controls extends Hestia_Register_Customizer_Controls {
 					'default'           => apply_filters( 'hestia_scroll_to_top_default', 0 ),
 				),
 				array(
-					'label'    => esc_html__( 'Enable Scroll to Top', 'hestia' ),
+					'label'    => esc_html__( 'Enable Scroll to Top', 'hestia-pro' ),
 					'section'  => 'hestia_general',
 					'priority' => 40,
 					'type'     => 'checkbox',
@@ -150,8 +150,8 @@ class Hestia_General_Controls extends Hestia_Register_Customizer_Controls {
 					'transport'         => 'postMessage',
 				),
 				array(
-					'label'       => esc_html__( 'Boxed Layout', 'hestia' ),
-					'description' => esc_html__( 'If enabled, the theme will use a boxed layout.', 'hestia' ),
+					'label'       => esc_html__( 'Boxed Layout', 'hestia-pro' ),
+					'description' => esc_html__( 'If enabled, the theme will use a boxed layout.', 'hestia-pro' ),
 					'section'     => 'hestia_general',
 					'priority'    => 50,
 					'type'        => 'checkbox',
@@ -167,7 +167,7 @@ class Hestia_General_Controls extends Hestia_Register_Customizer_Controls {
 					'default'           => false,
 				),
 				array(
-					'label'    => esc_html__( 'Disable', 'hestia' ) . ' ' . esc_html__( 'Frontpage Sections', 'hestia' ),
+					'label'    => esc_html__( 'Disable', 'hestia-pro' ) . ' ' . esc_html__( 'Frontpage Sections', 'hestia-pro' ),
 					'section'  => 'hestia_general',
 					'type'     => 'checkbox',
 					'priority' => 55,
@@ -185,15 +185,15 @@ class Hestia_General_Controls extends Hestia_Register_Customizer_Controls {
 		return array(
 			'full-width'    => array(
 				'url'   => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAQMAAABknzrDAAAABlBMVEX////V1dXUdjOkAAAAPUlEQVRIx2NgGAUkAcb////Y/+d/+P8AdcQoc8vhH/X/5P+j2kG+GA3CCgrwi43aMWrHqB2jdowEO4YpAACyKSE0IzIuBgAAAABJRU5ErkJggg==',
-				'label' => esc_html__( 'Full Width', 'hestia' ),
+				'label' => esc_html__( 'Full Width', 'hestia-pro' ),
 			),
 			'sidebar-left'  => array(
 				'url'   => apply_filters( 'hestia_layout_control_image_left', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAgMAAAAjP0ATAAAACVBMVEX///8+yP/V1dXG9YqxAAAAWElEQVR42mNgGAXDE4RCQMDAKONaBQINWqtWrWBatQDIaxg8ygYqQIAOYwC6bwHUmYNH2eBPSMhgBQXKRr0w6oVRL4x6YdQLo14Y9cKoF0a9QCO3jYLhBADvmFlNY69qsQAAAABJRU5ErkJggg==' ),
-				'label' => esc_html__( 'Left Sidebar', 'hestia' ),
+				'label' => esc_html__( 'Left Sidebar', 'hestia-pro' ),
 			),
 			'sidebar-right' => array(
 				'url'   => apply_filters( 'hestia_layout_control_image_right', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAgMAAAAjP0ATAAAACVBMVEX///8+yP/V1dXG9YqxAAAAWUlEQVR42mNgGAUjB4iGgkEIzZStAoEVTECiQWsVkLdiECkboAABOmwBF9BtUGcOImUDEiCkJCQU0ECBslEvjHph1AujXhj1wqgXRr0w6oVRLwyEF0bBUAUAz/FTNXm+R/MAAAAASUVORK5CYII=' ),
-				'label' => esc_html__( 'Right Sidebar', 'hestia' ),
+				'label' => esc_html__( 'Right Sidebar', 'hestia-pro' ),
 			),
 		);
 	}
