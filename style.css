@@ -5,7 +5,7 @@ Theme URI:      https://themeisle.com/themes/hestia/
 Author:         ThemeIsle
 Author URI:     https://themeisle.com
 Description:    Hestia is a modern WordPress theme for professionals. It fits creative business, small businesses (restaurants, wedding planners, sport/medical shops), startups, corporate businesses, online agencies and firms, portfolios, ecommerce (WooCommerce), and freelancers. It has a multipurpose one-page design, widgetized footer, blog/news page and a clean look, is compatible with: Flat Parallax Slider, Photo Gallery, Travel Map and Elementor Page Builder . The theme is responsive, WPML, Retina ready, SEO friendly, and uses Material Kit for design.
-Version:        2.0.12
+Version:        2.2.0
 License:        GNU General Public License v2 or later
 License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:    hestia
@@ -208,8 +208,6 @@ h3#ship-to-different-address {
 body,
 .btn,
 .form-control,
-ul,
-ol,
 .woocommerce #reviews #comments label {
   font-size: 14px;
 }
@@ -237,8 +235,15 @@ output {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.618;
+}
+
+h5.description,
+h5.subscribe-description,
+.card-product .price h4,
+h4.author {
+  font-weight: 300;
 }
 
 h6.category {
@@ -255,6 +260,10 @@ h6.category {
 .media .media-heading,
 .woocommerce.archive .blog-post .products .product-category h2 {
   font-weight: 700;
+}
+
+.hestia-title {
+  word-break: break-word;
 }
 
 button,
@@ -1380,6 +1389,13 @@ input[type="radio"] + label, input[type="checkbox"] + label {
   font-weight: 400;
 }
 
+blockquote cite {
+  font-size: .8em;
+  color: #777;
+  font-style: normal;
+  font-weight: 400;
+}
+
 /*--------------------------------------------------------------
 ## Buttons
 --------------------------------------------------------------*/
@@ -1420,11 +1436,6 @@ input[type="button"],
   white-space: normal;
   letter-spacing: 0;
   text-transform: uppercase;
-  will-change: box-shadow,transform;
-}
-
-.fca_qc_next_question {
-  will-change: unset;
 }
 
 input[type="number"] {
@@ -3947,8 +3958,13 @@ table > tbody > tr:last-child,
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
-.header-layout-classic-blog.page:not(.home) .main-raised {
+.header-layout-classic-blog.page:not(.home):not(.archive) .main-raised {
   border-radius: 0;
+}
+
+.header-layout-classic-blog:not(.page-template-default):not(.home):not(.archive).woocommerce.archive .main-raised, .header-layout-classic-blog:not(.page-template-default):not(.home):not(.archive).single .main-raised,
+.header-layout-classic-blog:not(.page-template-default):not(.home):not(.archive) .main-raised {
+  margin-top: 0;
 }
 
 /*--------------------------------------------------------------
@@ -4185,6 +4201,7 @@ table > tbody > tr:last-child,
   position: relative;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: unset;
 }
 .section-image:after {
   display: block;
@@ -6033,10 +6050,6 @@ dl dd, pre {
   margin-left: 24px;
 }
 
-article.sticky h2:before {
-  content: "Featured: ";
-}
-
 img.centered, .aligncenter {
   display: block;
   margin: 0 auto 24px;
@@ -6369,6 +6382,49 @@ aside .widget a {
 }
 
 /*--------------------------------------------------------------
+## Gutenberg Blocks
+--------------------------------------------------------------*/
+figure.wp-block-pullquote {
+  border-left: none;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  margin: 20px 0;
+  padding: 3em 0;
+}
+figure.wp-block-pullquote p {
+  font-size: 28px;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+figure.wp-block-pullquote blockquote {
+  margin: 1em;
+  border: none;
+}
+figure.wp-block-pullquote cite {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.single-post-wrap .has-small-font-size, .page-content-wrap .has-small-font-size {
+  font-size: 13px;
+}
+.single-post-wrap .has-medium-font-size, .page-content-wrap .has-medium-font-size {
+  font-size: 20px;
+}
+.single-post-wrap .has-large-font-size, .page-content-wrap .has-large-font-size {
+  font-size: 36px;
+}
+.single-post-wrap .has-huge-font-size, .page-content-wrap .has-huge-font-size {
+  font-size: 48px;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+  max-width: 150px;
+  border-bottom: 0;
+}
+
+/*--------------------------------------------------------------
 # Page
 --------------------------------------------------------------*/
 .page-header .container,
@@ -6554,6 +6610,25 @@ aside .widget a {
   flex: 1 0 auto;
 }
 .page:not(.home) .wrapper .main .blog-post {
+  flex: 1 0 auto;
+}
+
+body:not(.home) .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body:not(.home) .wrapper .main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+body:not(.home) .wrapper .main .hestia-blogs {
+  flex: 1 0 auto;
+}
+body:not(.home) .wrapper .content-area {
+  display: flex;
+  flex-direction: column;
   flex: 1 0 auto;
 }
 
@@ -7471,9 +7546,6 @@ aside .widget a {
     max-height: calc(100% - 70px);
     margin-top: 115px;
   }
-  body.admin-bar.woocommerce.single-product .product {
-    padding-top: 24px;
-  }
 }
 @media (max-width: 480px) {
   .single .main-raised {
@@ -8069,6 +8141,28 @@ div.wpforms-container .wpforms-form select:focus {
 
 body.fl-builder-edit .navbar.header-with-topbar.navbar-default:not(.navbar-transparent) {
   margin-top: 40px;
+}
+
+/*--------------------------------------------------------------
+## Everest Forms
+--------------------------------------------------------------*/
+.everest-forms .evf-field-container .evf-frontend-row input,
+.everest-forms .evf-field-container .evf-frontend-row select,
+.everest-forms .evf-field-container .evf-frontend-row textarea,
+.everest-forms .evf-field-container .evf-frontend-row input:focus,
+.everest-forms .evf-field-container .evf-frontend-row select:focus,
+.everest-forms .evf-field-container .evf-frontend-row textarea:focus {
+  border: none;
+  border-radius: 0;
+}
+
+.everest-forms .everest-forms-part-button,
+.everest-forms button[type=submit],
+.everest-forms input[type=submit] {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------

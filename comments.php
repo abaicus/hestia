@@ -1,5 +1,5 @@
 <?php
-/**
+/** CHECK THIS OUT
  * The template for displaying comments
  *
  * The area of the page that contains both current comments
