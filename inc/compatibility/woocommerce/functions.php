@@ -62,11 +62,11 @@ function hestia_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;
 
 	$fragments['a.cart-contents']  = '<a class="cart-contents btn btn-white pull-right" href="' . esc_url( wc_get_cart_url() ) . '"
-			title="' . esc_attr__( 'View your shopping cart', 'hestia-pro' ) . '">';
+			title="' . esc_attr__( 'View your shopping cart', 'hestia' ) . '">';
 	$fragments['a.cart-contents'] .= '<i class="fa fa-shopping-cart"></i>';
 	$fragments['a.cart-contents'] .= sprintf(
 		/* translators: %d is number of items */
-			_n( '%d item', '%d items', absint( $woocommerce->cart->cart_contents_count ), 'hestia-pro' ),
+			_n( '%d item', '%d items', absint( $woocommerce->cart->cart_contents_count ), 'hestia' ),
 		absint( $woocommerce->cart->cart_contents_count )
 	);
 	$fragments['a.cart-contents'] .= ' - ';
@@ -409,7 +409,7 @@ if ( ! function_exists( 'hestia_cart_link_after_primary_navigation' ) ) {
 	 */
 	function hestia_cart_link_after_primary_navigation() {
 		?>
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View cart', 'hestia-pro' ); ?>"
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View cart', 'hestia' ); ?>"
 				class="nav-cart-icon">
 			<i class="fa fa-shopping-cart"></i><?php echo trim( ( WC()->cart->get_cart_contents_count() > 0 ) ? '<span>' . WC()->cart->get_cart_contents_count() . '</span>' : '' ); ?></span>
 		</a>

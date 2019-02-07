@@ -75,9 +75,9 @@ class Hestia_Customizer_Notices extends Hestia_Register_Customizer_Controls {
 			new Hestia_Customizer_Section(
 				'hestia_docs_section',
 				array(
-					'theme_info_title' => esc_html__( 'Hestia', 'hestia-pro' ),
+					'theme_info_title' => esc_html__( 'Hestia', 'hestia' ),
 					'label_url'        => 'https://docs.themeisle.com/article/753-hestia-doc?utm_medium=customizer&utm_source=button&utm_campaign=documentation',
-					'label_text'       => esc_html__( 'Documentation', 'hestia-pro' ),
+					'label_text'       => esc_html__( 'Documentation', 'hestia' ),
 				),
 				'Hestia_Section_Docs'
 			)
@@ -110,8 +110,8 @@ class Hestia_Customizer_Notices extends Hestia_Register_Customizer_Controls {
 					'section_text' =>
 						sprintf(
 							/* translators: %1$s is Plugin Name */
-							esc_html__( 'To have access to a shop section please install and configure %1$s.', 'hestia-pro' ),
-							esc_html__( 'WooCommerce plugin', 'hestia-pro' )
+							esc_html__( 'To have access to a shop section please install and configure %1$s.', 'hestia' ),
+							esc_html__( 'WooCommerce plugin', 'hestia' )
 						),
 					'slug'         => 'woocommerce',
 					'panel'        => 'hestia_frontpage_sections',
@@ -155,12 +155,12 @@ class Hestia_Customizer_Notices extends Hestia_Register_Customizer_Controls {
 					'priority'    => 0,
 					'capability'  => 'install_plugins',
 					'hide_notice' => (bool) get_option( 'dismissed-hestia_info_obfx', false ),
-					'title'       => __( 'Recommended Plugins', 'hestia-pro' ),
+					'title'       => __( 'Recommended Plugins', 'hestia' ),
 					'options'     => array(
 						'redirect' => admin_url( 'customize.php' ),
 					),
 					/* translators: Orbit Fox Companion */
-					'description' => sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s.', 'hestia-pro' ), sprintf( '<strong>%s</strong>', 'Orbit Fox Companion' ) ),
+					'description' => sprintf( esc_html__( 'If you want to take full advantage of the options this theme has to offer, please install and activate %s.', 'hestia' ), sprintf( '<strong>%s</strong>', 'Orbit Fox Companion' ) ),
 				),
 				'Hestia_Main_Notice_Section'
 			)

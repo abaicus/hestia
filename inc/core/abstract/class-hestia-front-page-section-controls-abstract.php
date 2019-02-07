@@ -89,7 +89,7 @@ abstract class Hestia_Front_Page_Section_Controls_Abstract extends Hestia_Regist
 				),
 				'control' => array(
 					'type'     => 'checkbox',
-					'label'    => esc_html__( 'Disable section', 'hestia-pro' ),
+					'label'    => esc_html__( 'Disable section', 'hestia' ),
 					'section'  => $control_section,
 					'priority' => 1,
 				),
@@ -103,7 +103,7 @@ abstract class Hestia_Front_Page_Section_Controls_Abstract extends Hestia_Regist
 					'transport'         => $this->selective_refresh,
 				),
 				'control' => array(
-					'label'    => esc_html__( 'Section Title', 'hestia-pro' ),
+					'label'    => esc_html__( 'Section Title', 'hestia' ),
 					'section'  => $control_section,
 					'priority' => 5,
 				),
@@ -117,7 +117,7 @@ abstract class Hestia_Front_Page_Section_Controls_Abstract extends Hestia_Regist
 					'transport'         => $this->selective_refresh,
 				),
 				'control' => array(
-					'label'    => esc_html__( 'Section Subtitle', 'hestia-pro' ),
+					'label'    => esc_html__( 'Section Subtitle', 'hestia' ),
 					'section'  => $control_section,
 					'priority' => 10,
 				),

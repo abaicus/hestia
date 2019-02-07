@@ -292,7 +292,7 @@ class Hestia_Blog_Post_Layout {
 			'hestia_blog_post_meta',
 			sprintf(
 				/* translators: %1$s is Author name wrapped, %2$s is Time */
-				esc_html__( 'By %1$s, %2$s', 'hestia-pro' ),
+				esc_html__( 'By %1$s, %2$s', 'hestia' ),
 				sprintf(
 					/* translators: %1$s is Author name, %2$s is author link */
 					'<a href="%2$s" title="%1$s" class="url"><b class="author-name fn">%1$s</b></a>',
@@ -301,7 +301,7 @@ class Hestia_Blog_Post_Layout {
 				),
 				sprintf(
 					/* translators: %1$s is Time since post, %2$s is author Close tag */
-					esc_html__( '%1$s ago %2$s', 'hestia-pro' ),
+					esc_html__( '%1$s ago %2$s', 'hestia' ),
 					sprintf(
 						/* translators: %1$s is Time since, %2$s is Link to post */
 						'<a href="%2$s">%1$s',
@@ -348,7 +348,7 @@ class Hestia_Blog_Post_Layout {
 		$read_more_button  = '';
 		$read_more_button .= '<div class="text-center">';
 		$read_more_button .= '<a href="' . esc_url( get_the_permalink() ) . '" class="btn colored-button">';
-		$read_more_button .= apply_filters( 'hestia_blog_posts_button_text', esc_html__( 'Read more', 'hestia-pro' ) );
+		$read_more_button .= apply_filters( 'hestia_blog_posts_button_text', esc_html__( 'Read more', 'hestia' ) );
 		$read_more_button .= '</a>';
 		$read_more_button .= '</div>';
 

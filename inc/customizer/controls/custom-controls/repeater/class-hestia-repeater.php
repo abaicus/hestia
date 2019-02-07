@@ -140,12 +140,12 @@ class Hestia_Repeater extends WP_Customize_Control {
 	public function __construct( $manager, $id, $args = array() ) {
 		parent::__construct( $manager, $id, $args );
 		/*Get options from customizer.php*/
-		$this->add_field_label = esc_html__( 'Add new field', 'hestia-pro' );
+		$this->add_field_label = esc_html__( 'Add new field', 'hestia' );
 		if ( ! empty( $args['add_field_label'] ) ) {
 			$this->add_field_label = $args['add_field_label'];
 		}
 
-		$this->boxtitle = esc_html__( 'Customizer Repeater', 'hestia-pro' );
+		$this->boxtitle = esc_html__( 'Customizer Repeater', 'hestia' );
 		if ( ! empty( $args['item_name'] ) ) {
 			$this->boxtitle = $args['item_name'];
 		} elseif ( ! empty( $this->label ) ) {
@@ -381,7 +381,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_color_control == true ) {
 							$this->input_control(
 								array(
-									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color', 'hestia-pro' ), $this->id, 'customizer_repeater_color_control' ),
+									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color', 'hestia' ), $this->id, 'customizer_repeater_color_control' ),
 									'class'             => 'customizer-repeater-color-control',
 									'type'              => apply_filters( 'hestia_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color_control' ),
 									'sanitize_callback' => 'sanitize_hex_color',
@@ -393,7 +393,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_color2_control == true ) {
 							$this->input_control(
 								array(
-									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color', 'hestia-pro' ), $this->id, 'customizer_repeater_color2_control' ),
+									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color', 'hestia' ), $this->id, 'customizer_repeater_color2_control' ),
 									'class'             => 'customizer-repeater-color2-control',
 									'type'              => apply_filters( 'hestia_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color2_control' ),
 									'sanitize_callback' => 'sanitize_hex_color',
@@ -404,7 +404,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_title_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Title', 'hestia-pro' ), $this->id, 'customizer_repeater_title_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Title', 'hestia' ), $this->id, 'customizer_repeater_title_control' ),
 									'class' => 'customizer-repeater-title-control',
 									'type'  => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_title_control' ),
 								),
@@ -414,7 +414,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_subtitle_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Subtitle', 'hestia-pro' ), $this->id, 'customizer_repeater_subtitle_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Subtitle', 'hestia' ), $this->id, 'customizer_repeater_subtitle_control' ),
 									'class' => 'customizer-repeater-subtitle-control',
 									'type'  => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_subtitle_control' ),
 								),
@@ -424,7 +424,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_text_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'hestia-pro' ), $this->id, 'customizer_repeater_text_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'hestia' ), $this->id, 'customizer_repeater_text_control' ),
 									'class' => 'customizer-repeater-text-control',
 									'type'  => apply_filters( 'hestia_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text_control' ),
 								),
@@ -434,7 +434,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_link_control ) {
 							$this->input_control(
 								array(
-									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'hestia-pro' ), $this->id, 'customizer_repeater_link_control' ),
+									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'hestia' ), $this->id, 'customizer_repeater_link_control' ),
 									'class'             => 'customizer-repeater-link-control',
 									'sanitize_callback' => 'esc_url_raw',
 									'type'              => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link_control' ),
@@ -445,7 +445,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_text2_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'hestia-pro' ), $this->id, 'customizer_repeater_text2_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'hestia' ), $this->id, 'customizer_repeater_text2_control' ),
 									'class' => 'customizer-repeater-text2-control',
 									'type'  => apply_filters( 'hestia_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text2_control' ),
 								),
@@ -455,7 +455,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_link2_control ) {
 							$this->input_control(
 								array(
-									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'hestia-pro' ), $this->id, 'customizer_repeater_link2_control' ),
+									'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'hestia' ), $this->id, 'customizer_repeater_link2_control' ),
 									'class'             => 'customizer-repeater-link2-control',
 									'sanitize_callback' => 'esc_url_raw',
 									'type'              => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link2_control' ),
@@ -466,7 +466,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 						if ( $this->customizer_repeater_shortcode_control == true ) {
 							$this->input_control(
 								array(
-									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Shortcode', 'hestia-pro' ), $this->id, 'customizer_repeater_shortcode_control' ),
+									'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Shortcode', 'hestia' ), $this->id, 'customizer_repeater_shortcode_control' ),
 									'class' => 'customizer-repeater-shortcode-control',
 									'type'  => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_shortcode_control' ),
 								),
@@ -486,7 +486,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 							echo 'style="display:none;"';
 						}
 						echo '>';
-						esc_html_e( 'Delete field', 'hestia-pro' );
+						esc_html_e( 'Delete field', 'hestia' );
 						?>
 						</button>
 
@@ -516,7 +516,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_color_control == true ) {
 						$this->input_control(
 							array(
-								'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color', 'hestia-pro' ), $this->id, 'customizer_repeater_color_control' ),
+								'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color', 'hestia' ), $this->id, 'customizer_repeater_color_control' ),
 								'class'             => 'customizer-repeater-color-control',
 								'type'              => apply_filters( 'hestia_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color_control' ),
 								'sanitize_callback' => 'sanitize_hex_color',
@@ -526,7 +526,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_color2_control == true ) {
 						$this->input_control(
 							array(
-								'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color', 'hestia-pro' ), $this->id, 'customizer_repeater_color2_control' ),
+								'label'             => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color', 'hestia' ), $this->id, 'customizer_repeater_color2_control' ),
 								'class'             => 'customizer-repeater-color2-control',
 								'type'              => apply_filters( 'hestia_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color2_control' ),
 								'sanitize_callback' => 'sanitize_hex_color',
@@ -536,7 +536,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_title_control == true ) {
 						$this->input_control(
 							array(
-								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Title', 'hestia-pro' ), $this->id, 'customizer_repeater_title_control' ),
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Title', 'hestia' ), $this->id, 'customizer_repeater_title_control' ),
 								'class' => 'customizer-repeater-title-control',
 								'type'  => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_title_control' ),
 							)
@@ -545,7 +545,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_subtitle_control == true ) {
 						$this->input_control(
 							array(
-								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Subtitle', 'hestia-pro' ), $this->id, 'customizer_repeater_subtitle_control' ),
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Subtitle', 'hestia' ), $this->id, 'customizer_repeater_subtitle_control' ),
 								'class' => 'customizer-repeater-subtitle-control',
 								'type'  => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_subtitle_control' ),
 							)
@@ -554,7 +554,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_text_control == true ) {
 						$this->input_control(
 							array(
-								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'hestia-pro' ), $this->id, 'customizer_repeater_text_control' ),
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'hestia' ), $this->id, 'customizer_repeater_text_control' ),
 								'class' => 'customizer-repeater-text-control',
 								'type'  => apply_filters( 'hestia_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text_control' ),
 							)
@@ -563,7 +563,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_link_control == true ) {
 						$this->input_control(
 							array(
-								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'hestia-pro' ), $this->id, 'customizer_repeater_link_control' ),
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'hestia' ), $this->id, 'customizer_repeater_link_control' ),
 								'class' => 'customizer-repeater-link-control',
 								'type'  => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link_control' ),
 							)
@@ -572,7 +572,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_text2_control == true ) {
 						$this->input_control(
 							array(
-								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'hestia-pro' ), $this->id, 'customizer_repeater_text2_control' ),
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Text', 'hestia' ), $this->id, 'customizer_repeater_text2_control' ),
 								'class' => 'customizer-repeater-text2-control',
 								'type'  => apply_filters( 'hestia_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text2_control' ),
 							)
@@ -581,7 +581,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_link2_control == true ) {
 						$this->input_control(
 							array(
-								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'hestia-pro' ), $this->id, 'customizer_repeater_link2_control' ),
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Link', 'hestia' ), $this->id, 'customizer_repeater_link2_control' ),
 								'class' => 'customizer-repeater-link2-control',
 								'type'  => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link2_control' ),
 							)
@@ -590,7 +590,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $this->customizer_repeater_shortcode_control == true ) {
 						$this->input_control(
 							array(
-								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Shortcode', 'hestia-pro' ), $this->id, 'customizer_repeater_shortcode_control' ),
+								'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Shortcode', 'hestia' ), $this->id, 'customizer_repeater_shortcode_control' ),
 								'class' => 'customizer-repeater-shortcode-control',
 								'type'  => apply_filters( 'hestia_repeater_input_types_filter', '', $this->id, 'customizer_repeater_shortcode_control' ),
 							)
@@ -602,7 +602,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 					?>
 					<input type="hidden" class="social-repeater-box-id">
 					<button type="button" class="social-repeater-general-control-remove-field button" style="display:none;">
-						<?php esc_html_e( 'Delete field', 'hestia-pro' ); ?>
+						<?php esc_html_e( 'Delete field', 'hestia' ); ?>
 					</button>
 				</div>
 			</div>
@@ -674,15 +674,15 @@ class Hestia_Repeater extends WP_Customize_Control {
 		?>
 			>
 			<span class="customize-control-title">
-				<?php esc_html_e( 'Icon', 'hestia-pro' ); ?>
+				<?php esc_html_e( 'Icon', 'hestia' ); ?>
 			</span>
 			<span class="description customize-control-description">
 				<?php
 				echo sprintf(
 					/* translators: Fontawesome link with full list of icons available */
-					esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s.', 'hestia-pro' ),
+					esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s.', 'hestia' ),
 					/* translators: Fontawesome link with full list of icons available */
-					sprintf( '<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>', esc_html__( 'http://fontawesome.io/icons/', 'hestia-pro' ) )
+					sprintf( '<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>', esc_html__( 'http://fontawesome.io/icons/', 'hestia' ) )
 				);
 				?>
 			</span>
@@ -718,10 +718,10 @@ class Hestia_Repeater extends WP_Customize_Control {
 		?>
 			>
 			<span class="customize-control-title">
-				<?php esc_html_e( 'Image', 'hestia-pro' ); ?>
+				<?php esc_html_e( 'Image', 'hestia' ); ?>
 			</span>
 			<input type="text" class="widefat custom-media-url" value="<?php echo esc_attr( $value ); ?>">
-			<input type="button" class="button button-secondary customizer-repeater-custom-media-button" value="<?php esc_attr_e( 'Upload Image', 'hestia-pro' ); ?>" />
+			<input type="button" class="button button-secondary customizer-repeater-custom-media-button" value="<?php esc_attr_e( 'Upload Image', 'hestia' ); ?>" />
 		</div>
 		<?php
 	}
@@ -734,12 +734,12 @@ class Hestia_Repeater extends WP_Customize_Control {
 	private function icon_type_choice( $value = 'customizer_repeater_icon' ) {
 		?>
 		<span class="customize-control-title">
-			<?php esc_html_e( 'Image type', 'hestia-pro' ); ?>
+			<?php esc_html_e( 'Image type', 'hestia' ); ?>
 		</span>
 		<select class="customizer-repeater-image-choice">
-			<option value="customizer_repeater_icon" <?php selected( $value, 'customizer_repeater_icon' ); ?>><?php esc_html_e( 'Icon', 'hestia-pro' ); ?></option>
-			<option value="customizer_repeater_image" <?php selected( $value, 'customizer_repeater_image' ); ?>><?php esc_html_e( 'Image', 'hestia-pro' ); ?></option>
-			<option value="customizer_repeater_none" <?php selected( $value, 'customizer_repeater_none' ); ?>><?php esc_html_e( 'None', 'hestia-pro' ); ?></option>
+			<option value="customizer_repeater_icon" <?php selected( $value, 'customizer_repeater_icon' ); ?>><?php esc_html_e( 'Icon', 'hestia' ); ?></option>
+			<option value="customizer_repeater_image" <?php selected( $value, 'customizer_repeater_image' ); ?>><?php esc_html_e( 'Image', 'hestia' ); ?></option>
+			<option value="customizer_repeater_none" <?php selected( $value, 'customizer_repeater_none' ); ?>><?php esc_html_e( 'None', 'hestia' ); ?></option>
 		</select>
 		<?php
 	}
@@ -753,14 +753,14 @@ class Hestia_Repeater extends WP_Customize_Control {
 		$social_repeater = array();
 		$show_del        = 0;
 		?>
-		<span class="customize-control-title"><?php esc_html_e( 'Social icons', 'hestia-pro' ); ?></span>
+		<span class="customize-control-title"><?php esc_html_e( 'Social icons', 'hestia' ); ?></span>
 		<?php
 		echo '<span class="description customize-control-description">';
 		echo sprintf(
 			/* translators: Fontawesome link with full list of icons available */
-			esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s.', 'hestia-pro' ),
+			esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s.', 'hestia' ),
 			/* translators: Fontawesome link with full list of icons available */
-			sprintf( '<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>', esc_html__( 'http://fontawesome.io/icons/', 'hestia-pro' ) )
+			sprintf( '<a href="http://fontawesome.io/icons/" rel="nofollow">%s</a>', esc_html__( 'http://fontawesome.io/icons/', 'hestia' ) )
 		);
 		echo '</span>';
 		if ( ! empty( $value ) ) {
@@ -781,15 +781,15 @@ class Hestia_Repeater extends WP_Customize_Control {
 						<span class="input-group-addon"></span>
 					</div>
 					<?php get_template_part( $this->customizer_icon_container ); ?>
-					<input type="text" class="customizer-repeater-social-repeater-link" placeholder="<?php esc_attr_e( 'Link', 'hestia-pro' ); ?>">
+					<input type="text" class="customizer-repeater-social-repeater-link" placeholder="<?php esc_attr_e( 'Link', 'hestia' ); ?>">
 					<input type="hidden" class="customizer-repeater-social-repeater-id" value="">
 					<button class="social-repeater-remove-social-item" style="display:none">
-						<?php esc_html_e( 'Remove Icon', 'hestia-pro' ); ?>
+						<?php esc_html_e( 'Remove Icon', 'hestia' ); ?>
 					</button>
 				</div>
 				<input type="hidden" id="social-repeater-socials-repeater-colector" class="social-repeater-socials-repeater-colector" value=""/>
 			</div>
-			<button class="social-repeater-add-social-item button-secondary"><?php esc_html_e( 'Add Icon', 'hestia-pro' ); ?></button>
+			<button class="social-repeater-add-social-item button-secondary"><?php esc_html_e( 'Add Icon', 'hestia' ); ?></button>
 			<?php
 		} else {
 			?>
@@ -807,7 +807,7 @@ class Hestia_Repeater extends WP_Customize_Control {
 							echo '<span class="input-group-addon"><i class="fa ' . esc_attr( $social_icon['icon'] ) . '"></i></span>';
 						echo '</div>';
 						get_template_part( $this->customizer_icon_container );
-						echo '<input type="text" class="customizer-repeater-social-repeater-link" placeholder="' . esc_attr__( 'Link', 'hestia-pro' ) . '" value="';
+						echo '<input type="text" class="customizer-repeater-social-repeater-link" placeholder="' . esc_attr__( 'Link', 'hestia' ) . '" value="';
 					if ( ! empty( $social_icon['link'] ) ) {
 						echo esc_url( $social_icon['link'] );
 					}
@@ -821,13 +821,13 @@ class Hestia_Repeater extends WP_Customize_Control {
 					if ( $show_del == 1 ) {
 						echo 'display:none';
 					}
-						echo '">' . esc_html__( 'Remove Icon', 'hestia-pro' ) . '</button>';
+						echo '">' . esc_html__( 'Remove Icon', 'hestia' ) . '</button>';
 					echo '</div>';
 				}
 				?>
 				<input type="hidden" id="social-repeater-socials-repeater-colector" class="social-repeater-socials-repeater-colector" value="<?php echo esc_textarea( html_entity_decode( $value ) ); ?>" />
 			</div>
-			<button class="social-repeater-add-social-item button-secondary"><?php esc_html_e( 'Add Icon', 'hestia-pro' ); ?></button>
+			<button class="social-repeater-add-social-item button-secondary"><?php esc_html_e( 'Add Icon', 'hestia' ); ?></button>
 			<?php
 		}
 	}

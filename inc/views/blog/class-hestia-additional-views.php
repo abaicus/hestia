@@ -72,21 +72,21 @@ class Hestia_Additional_Views extends Hestia_Abstract_Main {
         <div class="col-md-6">
             <div class="entry-social">
                 <a target="_blank" rel="tooltip"
-                   data-original-title="' . esc_attr__( 'Share on Facebook', 'hestia-pro' ) . '"
+                   data-original-title="' . esc_attr__( 'Share on Facebook', 'hestia' ) . '"
                    class="btn btn-just-icon btn-round btn-facebook"
                    href="' . $facebook_url . '">
                    <i class="fa fa-facebook"></i>
                 </a>
                 
                 <a target="_blank" rel="tooltip"
-                   data-original-title="' . esc_attr__( 'Share on Twitter', 'hestia-pro' ) . '"
+                   data-original-title="' . esc_attr__( 'Share on Twitter', 'hestia' ) . '"
                    class="btn btn-just-icon btn-round btn-twitter"
                    href="' . $twitter_url . '">
                    <i class="fa fa-twitter"></i>
                 </a>
                 
                 <a target="_blank" rel="tooltip"
-                   data-original-title=" ' . esc_attr__( 'Share on Google+', 'hestia-pro' ) . '"
+                   data-original-title=" ' . esc_attr__( 'Share on Google+', 'hestia' ) . '"
                    class="btn btn-just-icon btn-round btn-google"
                    href="' . $google_url . '">
                    <i class="fa fa-google"></i>
@@ -107,14 +107,14 @@ class Hestia_Additional_Views extends Hestia_Abstract_Main {
 		<div class="section section-blog-info">
 			<div class="row">
 				<div class="col-md-6">
-					<div class="entry-categories"><?php esc_html_e( 'Categories:', 'hestia-pro' ); ?>
+					<div class="entry-categories"><?php esc_html_e( 'Categories:', 'hestia' ); ?>
 						<?php
 						foreach ( $categories as $category ) {
 							echo '<span class="label label-primary"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></span>';
 						}
 						?>
 					</div>
-					<?php the_tags( '<div class="entry-tags">' . esc_html__( 'Tags: ', 'hestia-pro' ) . '<span class="entry-tag">', '</span><span class="entry-tag">', '</span></div>' ); ?>
+					<?php the_tags( '<div class="entry-tags">' . esc_html__( 'Tags: ', 'hestia' ) . '<span class="entry-tag">', '</span><span class="entry-tag">', '</span></div>' ); ?>
 				</div>
 				<?php do_action( 'hestia_blog_social_icons' ); ?>
 			</div>
@@ -211,7 +211,7 @@ class Hestia_Additional_Views extends Hestia_Abstract_Main {
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h2 class="hestia-title text-center"><?php echo apply_filters( 'hestia_related_posts_title', esc_html__( 'Related Posts', 'hestia-pro' ) ); ?></h2>
+							<h2 class="hestia-title text-center"><?php echo apply_filters( 'hestia_related_posts_title', esc_html__( 'Related Posts', 'hestia' ) ); ?></h2>
 							<div class="row">
 								<?php
 								while ( $loop->have_posts() ) :

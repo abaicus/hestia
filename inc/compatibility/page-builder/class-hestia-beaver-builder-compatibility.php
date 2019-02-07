@@ -122,7 +122,7 @@ class Hestia_Beaver_Builder_Compatibility extends Hestia_Page_Builder_Helper {
 				array(
 					'ajaxurl'    => admin_url( 'admin-ajax.php' ),
 					'nonce'      => wp_create_nonce( 'hestia-pagebuilder-nonce' ),
-					'hideString' => esc_html__( 'Disable section', 'hestia-pro' ),
+					'hideString' => esc_html__( 'Disable section', 'hestia' ),
 				)
 			);
 		}

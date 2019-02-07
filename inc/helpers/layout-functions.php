@@ -21,8 +21,8 @@ if ( ! function_exists( 'hestia_wp_link_pages' ) ) {
 			'link_before'      => '',
 			'link_after'       => '',
 			'next_or_number'   => 'number',
-			'nextpagelink'     => esc_html__( 'Next page', 'hestia-pro' ),
-			'previouspagelink' => esc_html__( 'Previous page', 'hestia-pro' ),
+			'nextpagelink'     => esc_html__( 'Next page', 'hestia' ),
+			'previouspagelink' => esc_html__( 'Previous page', 'hestia' ),
 			'pagelink'         => '%',
 			'echo'             => 1,
 		);
@@ -120,7 +120,7 @@ if ( ! function_exists( 'hestia_comments_template' ) ) {
 									sprintf(
 										wp_kses(
 											/* translators: %s is Link to login */
-											__( 'You must be <a href="%s">logged in</a> to post a comment.', 'hestia-pro' ),
+											__( 'You must be <a href="%s">logged in</a> to post a comment.', 'hestia' ),
 											array(
 												'a' => array(
 													'href' => array(),
@@ -129,7 +129,7 @@ if ( ! function_exists( 'hestia_comments_template' ) ) {
 										),
 										esc_url( wp_login_url( apply_filters( 'the_permalink', esc_url( get_permalink() ) ) ) )
 									) . '</p>',
-			'comment_field'      => '<div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'What\'s on your mind?', 'hestia-pro' ) . '</label><textarea id="comment" name="comment" class="form-control" rows="6" aria-required="true"></textarea><span class="hestia-input"></span> </div>',
+			'comment_field'      => '<div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'What\'s on your mind?', 'hestia' ) . '</label><textarea id="comment" name="comment" class="form-control" rows="6" aria-required="true"></textarea><span class="hestia-input"></span> </div>',
 		);
 
 		return $args;
@@ -168,11 +168,11 @@ if ( ! function_exists( 'hestia_comments_list' ) ) {
 						<?php
 						printf(
 							/* translators: %1$s is Date, %2$s is Time */
-							esc_html__( '&#183; %1$s at %2$s', 'hestia-pro' ),
+							esc_html__( '&#183; %1$s at %2$s', 'hestia' ),
 							get_comment_date(),
 							get_comment_time()
 						);
-						edit_comment_link( esc_html__( '(Edit)', 'hestia-pro' ), '  ', '' );
+						edit_comment_link( esc_html__( '(Edit)', 'hestia' ), '  ', '' );
 						?>
 					</small>
 				</h4>
@@ -183,7 +183,7 @@ if ( ! function_exists( 'hestia_comments_list' ) ) {
 						array(
 							'depth'      => $depth,
 							'max_depth'  => $args['max_depth'],
-							'reply_text' => sprintf( '<i class="fa fa-mail-reply"></i> %s', esc_html__( 'Reply', 'hestia-pro' ) ),
+							'reply_text' => sprintf( '<i class="fa fa-mail-reply"></i> %s', esc_html__( 'Reply', 'hestia' ) ),
 						),
 						$comment->comment_ID,
 						$comment->comment_post_ID
@@ -276,7 +276,7 @@ if ( ! function_exists( 'hestia_sidebar_placeholder' ) ) {
 	 * @since  1.1.24
 	 */
 	function hestia_sidebar_placeholder( $class_to_add, $sidebar_id, $classes = 'col-md-3 blog-sidebar-wrapper' ) {
-		$content = apply_filters( 'hestia_sidebar_placeholder_content', esc_html__( 'This sidebar is active but empty. In order to use this layout, please add widgets in the sidebar', 'hestia-pro' ) );
+		$content = apply_filters( 'hestia_sidebar_placeholder_content', esc_html__( 'This sidebar is active but empty. In order to use this layout, please add widgets in the sidebar', 'hestia' ) );
 		?>
 		<div class="<?php echo esc_attr( $classes ); ?>">
 			<aside id="secondary" class="blog-sidebar <?php echo esc_attr( $class_to_add ); ?>" role="complementary">
@@ -678,7 +678,7 @@ if ( ! function_exists( 'hestia_category' ) ) {
 
 			foreach ( $categories as $category ) {
 				/* translators: %s is Category name */
-				$filtered_categories .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" title="' . esc_attr( sprintf( __( 'View all posts in %s', 'hestia-pro' ), $category->name ) ) . '" ' . ( $rel_tag === true ? ' rel="tag"' : '' ) . '>' . esc_html( $category->name ) . '</a> ';
+				$filtered_categories .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" title="' . esc_attr( sprintf( __( 'View all posts in %s', 'hestia' ), $category->name ) ) . '" ' . ( $rel_tag === true ? ' rel="tag"' : '' ) . '>' . esc_html( $category->name ) . '</a> ';
 				if ( $hestia_disable_categories === 'one' ) {
 					break;
 				}
@@ -718,14 +718,14 @@ if ( ! function_exists( 'hestia_contact_form_placeholder' ) ) {
 		<div class="col-md-5 col-md-offset-2 pirate-forms-placeholder hestia-contact-form-col">
 			<div class="card card-contact">
 				<div class="header header-raised header-primary text-center">
-					<h4 class="hestia-title">' . esc_html__( 'Contact Us', 'hestia-pro' ) . '</h4>
+					<h4 class="hestia-title">' . esc_html__( 'Contact Us', 'hestia' ) . '</h4>
 				</div>
 				<div class="pirate-forms-placeholder-overlay">
 					<div class="pirate-forms-placeholder-align">
 						<h4 class="placeholder-text"> ' .
 			sprintf(
 				/* translators: %1$s is Plugin name */
-				esc_html__( 'In order to add a contact form to this section, you need to install the %s plugin.', 'hestia-pro' ),
+				esc_html__( 'In order to add a contact form to this section, you need to install the %s plugin.', 'hestia' ),
 				esc_html( 'WPForms Lite' )
 			) . ' </h4>
 					</div>

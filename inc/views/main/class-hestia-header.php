@@ -105,7 +105,7 @@ class Hestia_Header extends Hestia_Abstract_Main {
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
-				<span class="sr-only"><?php esc_html_e( 'Toggle Navigation', 'hestia-pro' ); ?></span>
+				<span class="sr-only"><?php esc_html_e( 'Toggle Navigation', 'hestia' ); ?></span>
 			</button>
 			<?php
 			hestia_after_navbar_toggle_trigger();

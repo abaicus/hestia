@@ -68,7 +68,7 @@ class Hestia_Tweaks extends Hestia_Abstract_Main {
 	public function change_excerpt_more( $more ) {
 		global $post;
 
-		$custom_more_tag = '<a class="moretag" href="' . esc_url( get_permalink( $post->ID ) ) . '"> ' . esc_html__( 'Read more', 'hestia-pro' ) . '&hellip;</a>';
+		$custom_more_tag = '<a class="moretag" href="' . esc_url( get_permalink( $post->ID ) ) . '"> ' . esc_html__( 'Read more', 'hestia' ) . '&hellip;</a>';
 
 		if ( 'page' === get_option( 'show_on_front' ) && is_front_page() ) {
 			return $custom_more_tag;
@@ -132,9 +132,9 @@ class Hestia_Tweaks extends Hestia_Abstract_Main {
 		$req      = get_option( 'require_name_email' );
 		$aria_req = ( $req ? " aria-required='true'" : '' );
 
-		$fields['author'] = '<div class="row"> <div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Name', 'hestia-pro' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="author" name="author" class="form-control" type="text"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div>';
-		$fields['email']  = '<div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Email', 'hestia-pro' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="email" name="email" class="form-control" type="email"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div>';
-		$fields['url']    = '<div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Website', 'hestia-pro' ) . '</label><input id="url" name="url" class="form-control" type="url"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div> </div>';
+		$fields['author'] = '<div class="row"> <div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Name', 'hestia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="author" name="author" class="form-control" type="text"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div>';
+		$fields['email']  = '<div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Email', 'hestia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label><input id="email" name="email" class="form-control" type="email"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div>';
+		$fields['url']    = '<div class="col-md-4"> <div class="form-group label-floating is-empty"> <label class="control-label">' . esc_html__( 'Website', 'hestia' ) . '</label><input id="url" name="url" class="form-control" type="url"' . $aria_req . ' /> <span class="hestia-input"></span> </div> </div> </div>';
 		return $fields;
 	}
 
@@ -155,23 +155,23 @@ class Hestia_Tweaks extends Hestia_Abstract_Main {
 
 		if ( $id === 'hestia_slider_content' ) {
 			if ( $control === 'customizer_repeater_text_control' ) {
-				return esc_html__( 'Button Text', 'hestia-pro' );
+				return esc_html__( 'Button Text', 'hestia' );
 			}
 
 			if ( $control === 'customizer_repeater_color_control' ) {
-				return esc_html__( 'Button', 'hestia-pro' ) . ' ' . esc_html__( 'Color', 'hestia-pro' );
+				return esc_html__( 'Button', 'hestia' ) . ' ' . esc_html__( 'Color', 'hestia' );
 			}
 
 			if ( $control === 'customizer_repeater_color2_control' ) {
-				return esc_html__( 'Second', 'hestia-pro' ) . ' ' . esc_html__( 'Button', 'hestia-pro' ) . ' ' . esc_html__( 'Color', 'hestia-pro' );
+				return esc_html__( 'Second', 'hestia' ) . ' ' . esc_html__( 'Button', 'hestia' ) . ' ' . esc_html__( 'Color', 'hestia' );
 			}
 
 			if ( $control === 'customizer_repeater_text2_control' ) {
-				return esc_html__( 'Second', 'hestia-pro' ) . ' ' . esc_html__( 'Button text', 'hestia-pro' );
+				return esc_html__( 'Second', 'hestia' ) . ' ' . esc_html__( 'Button text', 'hestia' );
 			}
 
 			if ( $control === 'customizer_repeater_link2_control' ) {
-				return esc_html__( 'Second', 'hestia-pro' ) . ' ' . esc_html__( 'Link', 'hestia-pro' );
+				return esc_html__( 'Second', 'hestia' ) . ' ' . esc_html__( 'Link', 'hestia' );
 			}
 		}
 

@@ -65,11 +65,11 @@ class Hestia_Shop_Section extends Hestia_Abstract_Main {
 			 */
 		if ( current_user_can( 'edit_theme_options' ) ) {
 			/* translators: 1 - link to customizer setting. 2 - 'customizer' */
-			$hestia_shop_subtitle = get_theme_mod( 'hestia_shop_subtitle', sprintf( __( 'Change this subtitle in %s.', 'hestia-pro' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_shop_subtitle' ) ), __( 'customizer', 'hestia-pro' ) ) ) );
+			$hestia_shop_subtitle = get_theme_mod( 'hestia_shop_subtitle', sprintf( __( 'Change this subtitle in %s.', 'hestia' ), sprintf( '<a href="%1$s" class="default-link">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=hestia_shop_subtitle' ) ), __( 'customizer', 'hestia' ) ) ) );
 		} else {
 			$hestia_shop_subtitle = get_theme_mod( 'hestia_shop_subtitle' );
 		}
-			$hestia_shop_title = get_theme_mod( 'hestia_shop_title', esc_html__( 'Products', 'hestia-pro' ) );
+			$hestia_shop_title = get_theme_mod( 'hestia_shop_title', esc_html__( 'Products', 'hestia' ) );
 
 			/**
 			 * In case this function is called as shortcode, we remove the container and we add 'is-shortcode' class.

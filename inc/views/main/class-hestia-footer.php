@@ -125,12 +125,12 @@ class Hestia_Footer extends Hestia_Abstract_Main {
 			'hestia_general_credits',
 			sprintf(
 				/* translators: %1$s is Theme Name, %2$s is WordPress */
-				esc_html__( '%1$s | Developed by %2$s', 'hestia-pro' ),
-				esc_html__( 'Hestia', 'hestia-pro' ),
+				esc_html__( '%1$s | Developed by %2$s', 'hestia' ),
+				esc_html__( 'Hestia', 'hestia' ),
 				/* translators: %1$s is URL, %2$s is WordPress */
 				sprintf(
 					'<a href="%1$s" rel="nofollow">%2$s</a>',
-					esc_url( __( 'https://themeisle.com', 'hestia-pro' ) ),
+					esc_url( __( 'https://themeisle.com', 'hestia' ) ),
 					'ThemeIsle'
 				)
 			)

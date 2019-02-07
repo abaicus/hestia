@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 					if ( 0 == ! $comments_number ) {
 						if ( 1 === $comments_number ) {
 							/* translators: %s: post title */
-							_x( 'One comment', 'comments title', 'hestia-pro' );
+							_x( 'One comment', 'comments title', 'hestia' );
 						} else {
 							printf(
 								/* translators: 1: number of comments, 2: post title */
@@ -38,7 +38,7 @@ if ( post_password_required() ) {
 									'%1$s Comments',
 									$comments_number,
 									'comments title',
-									'hestia-pro'
+									'hestia'
 								),
 								number_format_i18n( $comments_number )
 							);
@@ -70,7 +70,7 @@ if ( post_password_required() ) {
 				<?php comment_form( hestia_comments_template() ); ?>
 				<?php if ( ! comments_open() && get_comments_number() ) : ?>
 					<?php if ( is_single() ) : ?>
-						<h4 class="no-comments hestia-title text-center"><?php esc_html_e( 'Comments are closed.', 'hestia-pro' ); ?></h4>
+						<h4 class="no-comments hestia-title text-center"><?php esc_html_e( 'Comments are closed.', 'hestia' ); ?></h4>
 					<?php endif; ?>
 				<?php endif; ?>
 			</div>

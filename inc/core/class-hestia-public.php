@@ -123,7 +123,7 @@ class Hestia_Public {
 			'hestia_scripts',
 			'hestiaViewcart',
 			array(
-				'view_cart_label' => esc_html__( 'View cart', 'hestia-pro' ), // label of View cart button,
+				'view_cart_label' => esc_html__( 'View cart', 'hestia' ), // label of View cart button,
 				'view_cart_link'  => esc_url( $hestia_cart_url ), // link of View cart button
 			)
 		);
@@ -178,8 +178,8 @@ class Hestia_Public {
 		 * supported by Roboto or Roboto Slab, translate this to 'off'. Do not translate
 		 * into your own language.
 		 */
-		$roboto      = _x( 'on', 'Roboto font: on or off', 'hestia-pro' );
-		$roboto_slab = _x( 'on', 'Roboto Slab font: on or off', 'hestia-pro' );
+		$roboto      = _x( 'on', 'Roboto font: on or off', 'hestia' );
+		$roboto_slab = _x( 'on', 'Roboto Slab font: on or off', 'hestia' );
 
 		if ( 'off' !== $roboto || 'off' !== $roboto_slab ) {
 			$font_families = array();
@@ -329,12 +329,12 @@ class Hestia_Public {
 		 * Array of all the main sidebars registered in the theme
 		 */
 		$sidebars_array = array(
-			'sidebar-1'           => esc_html__( 'Sidebar', 'hestia-pro' ),
-			'subscribe-widgets'   => esc_html__( 'Subscribe', 'hestia-pro' ),
-			'sidebar-woocommerce' => esc_html__( 'WooCommerce Sidebar', 'hestia-pro' ),
-			'sidebar-top-bar'     => esc_html__( 'Very Top Bar', 'hestia-pro' ),
-			'header-sidebar'      => esc_html__( 'Navigation', 'hestia-pro' ),
-			'sidebar-big-title'   => apply_filters( 'hestia_big_title_fs_label', esc_html__( 'Big Title Section', 'hestia-pro' ) ),
+			'sidebar-1'           => esc_html__( 'Sidebar', 'hestia' ),
+			'subscribe-widgets'   => esc_html__( 'Subscribe', 'hestia' ),
+			'sidebar-woocommerce' => esc_html__( 'WooCommerce Sidebar', 'hestia' ),
+			'sidebar-top-bar'     => esc_html__( 'Very Top Bar', 'hestia' ),
+			'header-sidebar'      => esc_html__( 'Navigation', 'hestia' ),
+			'sidebar-big-title'   => apply_filters( 'hestia_big_title_fs_label', esc_html__( 'Big Title Section', 'hestia' ) ),
 		);
 
 		/**
@@ -344,10 +344,10 @@ class Hestia_Public {
 		$footer_sidebars_array = apply_filters(
 			'hestia_footer_widget_areas_array',
 			array(
-				'footer-one-widgets'   => esc_html__( 'Footer One', 'hestia-pro' ),
-				'footer-two-widgets'   => esc_html__( 'Footer Two', 'hestia-pro' ),
-				'footer-three-widgets' => esc_html__( 'Footer Three', 'hestia-pro' ),
-				'footer-four-widgets'  => esc_html__( 'Footer Four', 'hestia-pro' ),
+				'footer-one-widgets'   => esc_html__( 'Footer One', 'hestia' ),
+				'footer-two-widgets'   => esc_html__( 'Footer Two', 'hestia' ),
+				'footer-three-widgets' => esc_html__( 'Footer Three', 'hestia' ),
+				'footer-four-widgets'  => esc_html__( 'Footer Four', 'hestia' ),
 			)
 		);
 
@@ -464,17 +464,17 @@ class Hestia_Public {
 						'color' => '#000000',
 					),
 					2 => array(
-						'name'  => esc_html__( 'Accent Color', 'hestia-pro' ),
+						'name'  => esc_html__( 'Accent Color', 'hestia' ),
 						'slug'  => 'accent',
 						'color' => get_theme_mod( 'accent_color', '#e91e63' ),
 					),
 					4 => array(
-						'name'  => esc_html__( 'Body', 'hestia-pro' ),
+						'name'  => esc_html__( 'Body', 'hestia' ),
 						'slug'  => 'background_color',
 						'color' => '#' . get_theme_mod( 'background_color', 'E5E5E5' ),
 					),
 					5 => array(
-						'name'  => esc_html__( 'Header Background', 'hestia-pro' ),
+						'name'  => esc_html__( 'Header Background', 'hestia' ),
 						'slug'  => 'header-gradient',
 						'color' => get_theme_mod( 'hestia_header_gradient_color', '#a81d84' ),
 					),
@@ -513,20 +513,20 @@ class Hestia_Public {
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => esc_html__( 'Body', 'hestia-pro' ),
-					'shortName' => esc_html__( 'Body', 'hestia-pro' ),
+					'name'      => esc_html__( 'Body', 'hestia' ),
+					'shortName' => esc_html__( 'Body', 'hestia' ),
 					'size'      => $body_fs,
 					'slug'      => 'body',
 				),
 				array(
-					'name'      => esc_html__( 'Headings', 'hestia-pro' ),
-					'shortName' => esc_html__( 'Headings', 'hestia-pro' ),
+					'name'      => esc_html__( 'Headings', 'hestia' ),
+					'shortName' => esc_html__( 'Headings', 'hestia' ),
 					'size'      => $heading_fs,
 					'slug'      => 'heading',
 				),
 				array(
-					'name'      => esc_html__( 'Title', 'hestia-pro' ),
-					'shortName' => esc_html__( 'Title', 'hestia-pro' ),
+					'name'      => esc_html__( 'Title', 'hestia' ),
+					'shortName' => esc_html__( 'Title', 'hestia' ),
 					'size'      => $title_fs,
 					'slug'      => 'title',
 				),
@@ -537,9 +537,9 @@ class Hestia_Public {
 
 		register_nav_menus(
 			array(
-				'primary'      => esc_html__( 'Primary Menu', 'hestia-pro' ),
-				'footer'       => esc_html__( 'Footer Menu', 'hestia-pro' ),
-				'top-bar-menu' => esc_html__( 'Very Top Bar', 'hestia-pro' ) . ' ' . esc_html__( 'Menu', 'hestia-pro' ),
+				'primary'      => esc_html__( 'Primary Menu', 'hestia' ),
+				'footer'       => esc_html__( 'Footer Menu', 'hestia' ),
+				'top-bar-menu' => esc_html__( 'Very Top Bar', 'hestia' ) . ' ' . esc_html__( 'Menu', 'hestia' ),
 			)
 		);
 
@@ -558,7 +558,7 @@ class Hestia_Public {
 	 * @return array starter content.
 	 */
 	private function get_starter_content() {
-		$default_home_content        = '<div class="col-md-5"><h3>' . esc_html__( 'About Hestia', 'hestia-pro' ) . '</h3>' . esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use Hestia.', 'hestia-pro' ) . '</div><div class="col-md-6 col-md-offset-1"><img class="size-medium alignright" src="' . esc_url( get_template_directory_uri() . '/assets/img/about-content.png' ) . '"/></div>';
+		$default_home_content        = '<div class="col-md-5"><h3>' . esc_html__( 'About Hestia', 'hestia' ) . '</h3>' . esc_html__( 'Need more details? Please check our full documentation for detailed information on how to use Hestia.', 'hestia' ) . '</div><div class="col-md-6 col-md-offset-1"><img class="size-medium alignright" src="' . esc_url( get_template_directory_uri() . '/assets/img/about-content.png' ) . '"/></div>';
 		$default_home_featured_image = get_template_directory_uri() . '/assets/img/contact.jpg';
 
 		/*
@@ -567,8 +567,8 @@ class Hestia_Public {
 		$starter_content = array(
 			'attachments' => array(
 				'featured-image-home' => array(
-					'post_title'   => __( 'Featured Image Homepage', 'hestia-pro' ),
-					'post_content' => __( 'Featured Image Homepage', 'hestia-pro' ),
+					'post_title'   => __( 'Featured Image Homepage', 'hestia' ),
+					'post_content' => __( 'Featured Image Homepage', 'hestia' ),
 					'file'         => 'assets/img/contact.jpg',
 				),
 			),
@@ -581,7 +581,7 @@ class Hestia_Public {
 			),
 			'nav_menus'   => array(
 				'primary' => array(
-					'name'  => esc_html__( 'Primary Menu', 'hestia-pro' ),
+					'name'  => esc_html__( 'Primary Menu', 'hestia' ),
 					'items' => array(
 						'page_home',
 						'page_blog',
@@ -643,24 +643,24 @@ class Hestia_Public {
 				),
 			),
 			'i18n'        => array(
-				'onboard_description_old' => __( 'This process will set up your website, install required plugins, import demo content (pages, posts, media) and set up the customizer options.', 'hestia-pro' ),
-				'templates_title'         => __( 'Get started here', 'hestia-pro' ),
-				'templates_description'   => __( 'With Hestia, you can choose from multiple unique demos, specially designed for you, that can be installed with a single click. You just need to choose your favorite, and we will take care of everything else.', 'hestia-pro' ),
+				'onboard_description_old' => __( 'This process will set up your website, install required plugins, import demo content (pages, posts, media) and set up the customizer options.', 'hestia' ),
+				'templates_title'         => __( 'Get started here', 'hestia' ),
+				'templates_description'   => __( 'With Hestia, you can choose from multiple unique demos, specially designed for you, that can be installed with a single click. You just need to choose your favorite, and we will take care of everything else.', 'hestia' ),
 			),
 			'can_migrate' => array(
 				'zerif-pro'  => array(
 					'theme_name'      => 'Zelle Pro',
 					'theme_mod_check' => 'zerif_frontpage_was_imported',
 					'template'        => 'zelle',
-					'heading'         => __( 'Want to keep using Zelle\'s homepage?', 'hestia-pro' ),
-					'description'     => __( 'Hi! We\'ve noticed you were using Zelle before. To make your transition easier, we can help you keep the same beautiful homepage you had before, by converting it into an Elementor template. This option will also import your homepage content.', 'hestia-pro' ),
+					'heading'         => __( 'Want to keep using Zelle\'s homepage?', 'hestia' ),
+					'description'     => __( 'Hi! We\'ve noticed you were using Zelle before. To make your transition easier, we can help you keep the same beautiful homepage you had before, by converting it into an Elementor template. This option will also import your homepage content.', 'hestia' ),
 				),
 				'zerif-lite' => array(
 					'theme_name'      => 'Zelle Lite',
 					'theme_mod_check' => 'zerif_frontpage_was_imported',
 					'template'        => 'zelle',
-					'heading'         => __( 'Want to keep using Zelle\'s homepage?', 'hestia-pro' ),
-					'description'     => __( 'Hi! We\'ve noticed you were using Zelle before. To make your transition easier, we can help you keep the same beautiful homepage you had before, by converting it into an Elementor template. This option will also import your homepage content.', 'hestia-pro' ),
+					'heading'         => __( 'Want to keep using Zelle\'s homepage?', 'hestia' ),
+					'description'     => __( 'Hi! We\'ve noticed you were using Zelle before. To make your transition easier, we can help you keep the same beautiful homepage you had before, by converting it into an Elementor template. This option will also import your homepage content.', 'hestia' ),
 				),
 			),
 			'pro_link'    => 'https://themeisle.com/themes/hestia-pro/upgrade/',
@@ -738,11 +738,11 @@ class Hestia_Public {
 	 */
 	public function set_i18n() {
 		$this->generic_strings = array(
-			'header_title_defaut'    => esc_html__( 'Lorem Ipsum', 'hestia-pro' ),
-			'header_content_defaut'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'hestia-pro' ),
-			'theme_info_title'       => esc_html__( 'Hestia', 'hestia-pro' ),
-			'blog_subscribe_widgets' => esc_html__( 'Blog Subscribe Section', 'hestia-pro' ),
-            'onboarding_message'     => esc_html__( 'This process will set up your website, install required plugins, import demo content (pages, posts, media) and set up the customizer options.', 'hestia-pro' ),
+			'header_title_defaut'    => esc_html__( 'Lorem Ipsum', 'hestia' ),
+			'header_content_defaut'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'hestia' ),
+			'theme_info_title'       => esc_html__( 'Hestia', 'hestia' ),
+			'blog_subscribe_widgets' => esc_html__( 'Blog Subscribe Section', 'hestia' ),
+            'onboarding_message'     => esc_html__( 'This process will set up your website, install required plugins, import demo content (pages, posts, media) and set up the customizer options.', 'hestia' ),
 		);
 	}
 

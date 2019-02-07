@@ -17,12 +17,12 @@
 					<?php
 					printf(
 						/* translators: %s is Link to new post */
-						esc_html__( 'Ready to publish your first post? %s.', 'hestia-pro' ),
+						esc_html__( 'Ready to publish your first post? %s.', 'hestia' ),
 						sprintf(
 							/* translators: %1$s is Link to new post, %2$s is Get started here */
 							'<a href="%1$s">%2$s</a>',
 							esc_url( admin_url( 'post-new.php' ) ),
-							esc_html__( 'Get started here', 'hestia-pro' )
+							esc_html__( 'Get started here', 'hestia' )
 						)
 					);
 					?>
@@ -31,12 +31,12 @@
 			elseif ( is_search() ) :
 				do_action( 'hestia_before_search_content' );
 				?>
-				<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'hestia-pro' ); ?></p>
+				<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'hestia' ); ?></p>
 				<?php get_search_form(); ?>
 				<?php
 			else :
 				?>
-				<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'hestia-pro' ); ?></p>
+				<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'hestia' ); ?></p>
 				<?php get_search_form(); ?>
 			<?php endif; ?>
 		</div>

@@ -43,7 +43,7 @@ class Hestia_Customizer_Main extends Hestia_Register_Customizer_Controls {
 				'hestia_appearance_settings',
 				array(
 					'priority' => 25,
-					'title'    => esc_html__( 'Appearance Settings', 'hestia-pro' ),
+					'title'    => esc_html__( 'Appearance Settings', 'hestia' ),
 				)
 			)
 		);
@@ -53,7 +53,7 @@ class Hestia_Customizer_Main extends Hestia_Register_Customizer_Controls {
 				'hestia_frontpage_sections',
 				array(
 					'priority'        => 30,
-					'title'           => esc_html__( 'Frontpage Sections', 'hestia-pro' ),
+					'title'           => esc_html__( 'Frontpage Sections', 'hestia' ),
 					'active_callback' => array( $this, 'hestia_display_frontpage_section' ),
 				)
 			)
@@ -64,7 +64,7 @@ class Hestia_Customizer_Main extends Hestia_Register_Customizer_Controls {
 				'hestia_blog_settings',
 				array(
 					'priority' => 45,
-					'title'    => esc_html__( 'Blog Settings', 'hestia-pro' ),
+					'title'    => esc_html__( 'Blog Settings', 'hestia' ),
 				)
 			)
 		);
@@ -78,7 +78,7 @@ class Hestia_Customizer_Main extends Hestia_Register_Customizer_Controls {
 				array(
 					'priority'     => 25,
 					'section'      => 'background_image',
-					'button_text'  => esc_html__( 'Header Background', 'hestia-pro' ),
+					'button_text'  => esc_html__( 'Header Background', 'hestia' ),
 					'button_class' => 'focus-customizer-header-image',
 					'icon_class'   => 'fa-image',
 				),

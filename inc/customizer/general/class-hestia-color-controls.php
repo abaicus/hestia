@@ -22,7 +22,7 @@ class Hestia_Color_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'hestia_sanitize_colors',
 				),
 				array(
-					'label'    => esc_html__( 'Accent Color', 'hestia-pro' ),
+					'label'    => esc_html__( 'Accent Color', 'hestia' ),
 					'section'  => 'colors',
 					'palette'  => false,
 					'priority' => 10,
@@ -40,7 +40,7 @@ class Hestia_Color_Controls extends Hestia_Register_Customizer_Controls {
 					'sanitize_callback' => 'hestia_sanitize_colors',
 				),
 				array(
-					'label'    => esc_html__( 'Header Gradient', 'hestia-pro' ),
+					'label'    => esc_html__( 'Header Gradient', 'hestia' ),
 					'section'  => 'header_image',
 					'priority' => 30,
 				),
